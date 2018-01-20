@@ -10,21 +10,19 @@
 
   <header class="page-header">
 
-    <div class="page-header__logo">
-      <a class="page-header__logo--link" href="index.html">
-        <img src="#" width="0" height="0" alt="Логотип магазина Mishka. Милые штуки ручной работы">
-      </a>
-    </div>
+    <a class="page-header__logo" href="index.html">
+      <img src="#" width="0" height="0" alt="Логотип магазина Mishka. Милые штуки ручной работы">
+    </a>
 
     <nav class="site-navigation">
 
-      <button class="site-navigation__toggle" type="button"></button>
+      <button class="site-navigation__toggle" type="button">Меню</button>
 
       <ul class="site-navigation__menu">
-        <li class="site-navigation__elem"><a class="site-navigation__elem--catalog" href="#">Каталог товаров</a></li>
-        <li class="site-navigation__elem"><a class="site-navigation__elem--knitting" href="form.html">Вязание на заказ</a></li>
-        <li class="site-navigation__elem"><a class="site-navigation__elem--search" href="#">Поиск по сайту</a></li>
-        <li class="site-navigation__elem"><a class="site-navigation__elem--basket-empty" href="#">Корзина: пока пуста</a></li>
+        <li class="site-navigation__elem"><a href="#">Каталог товаров</a></li>
+        <li class="site-navigation__elem"><a href="form.html">Вязание на заказ</a></li>
+        <li class="site-navigation__elem site-navigation__elem--search"><a href="#">Поиск по сайту</a></li>
+        <li class="site-navigation__elem site-navigation__elem--basket-empty"><a href="#">Корзина: пока пуста</a></li>
       </ul>
 
     </nav>
@@ -33,94 +31,55 @@
 
   <main class="page-main">
 
-    <h1 class="page-main__catalog-title">Каталог товаров</h1>
+    <section class="catalog">
 
-    <section class="catalog-menu">
+      <h1 class="catalog__title">Каталог товаров</h1>
 
-      <h2 class="visually-hidden">Меню каталога</h2>
+      <article class="catalog__item article">
+        <a class="article__profile" href="#">
+          <img class="article__img article__img--toy-rabbit" src="#" width="0" height="0" alt="Игрушка Зайчик-Попрыгайчик">
+          <h3 class="article__name">Зайчик-попрыгайчик</h3>
+        </a>
+        <p class="article__size">Рост 30 см, вес 200 г</p>
+        <p class="article__price">1200 руб.</p>
+        <a class="article__order" href="#">Заказать</a>
+      </article>
 
-      <ul class="catalog-list">
+      <article class="catalog__item article">
+        <a class="article__profile" href="#">
+          <img class="article__img article__img--laundry-basket" src="#" width="0" height="0" alt="Корзинка для белья">
+          <h3 class="article__name">Корзинка для белья</h3>
+        </a>
+        <p class="article__size">Диаметр 15 см, высота 10 см</p>
+        <p class="article__price">690 руб.</p>
+        <a class="article__order" href="#">Заказать</a>
+      </article>
 
-        <li class="catalog-list__item article">
-          <a class="article__profile" href="#">
-            <img class="article__profile--toy-rabbit" src="#" width="0" height="0" alt="Игрушка Зайчик-Попрыгайчик">
-            <h3 class="article__name">Зайчик-попрыгайчик</h3>
-          </a>
-          <p class="article__size">Рост 30 см, вес 200 г</p>
-          <p class="article__price">1200 руб.</p>
-          <a class="article_basket-icon" href="#">
-            <img class="article_basket-icon--pic" src="#" width="0" height="0" alt="Заказать">
-          </a>
-        </li>
-
-        <li class="catalog-list__item article">
-          <a class="article__profile" href="#">
-            <img class="article__profile--laundry-basket" src="#" width="0" height="0" alt="Корзинка для белья">
-            <h3 class="article__name">Корзинка для белья</h3>
-          </a>
-          <p class="article__size">Диаметр 15 см, высота 10 см</p>
-          <p class="article__price">690 руб.</p>
-          <a class="article_basket-icon" href="#">
-            <img class="article_basket-icon--pic" src="#" width="0" height="0" alt="Заказать">
-          </a>
-        </li>
-
-        <li class="catalog-list__item article">
-          <a class="article__profile" href="#">
-            <img class="article__profile--toy-basket" src="#" width="0" height="0" alt="Большая корзинка для игрушек">
-            <h3 class="article__name">Большая корзинка для игрушек</h3>
-          </a>
-          <p class="article__size">Диаметр 30 см, высота 30 см</p>
-          <p class="article__price">1500 руб.</p>
-          <a class="article_basket-icon" href="#">
-            <img class="article_basket-icon--pic" src="#" width="0" height="0" alt="Заказать">
-          </a>
-        </li>
-
-      </ul>
-
-      <form class="popup-size" action="https://echo.htmlacademy.ru" method="post">
-
-        <p class="popup-size__title">Добавить в корзину</p>
-
-        <fieldset class="size-choice">
-
-          <legend class="size-choice__title">Выберите размер:</legend>
-
-            <input class="visually_hidden" type="checkbox" id="size-1" name="size" checked>
-            <label for="size-1">S</label>
-
-            <input class="visually_hidden" type="checkbox" id="size-2" name="size">
-            <label for="size-2">M</label>
-
-            <input class="visually_hidden" type="checkbox" id="size-3" name="size">
-            <label for="size-3">L</label>
-
-        </fieldset>
-
-        <button class="btn popup-size__btn" type="button">Добавить</button>
-
-      </form>
+      <article class="catalog__item article">
+        <a class="article__profile" href="#">
+          <img class="article__img article__img--toy-basket" src="#" width="0" height="0" alt="Большая корзинка для игрушек">
+          <h3 class="article__name">Большая корзинка для игрушек</h3>
+        </a>
+        <p class="article__size">Диаметр 30 см, высота 30 см</p>
+        <p class="article__price">1500 руб.</p>
+        <a class="article__order" href="#">Заказать</a>
+      </article>
 
     </section>
 
     <section class="production">
 
-      <div class="production_container">
+      <h2 class="production__title">Процесс производства</h2>
 
-        <h2 class="production_title">Процесс производства</h2>
+      <video class="production__video" width="10" height="10" controls preload="metadata" poster="#">
+        <source src="#" type="video/mp4"/>
+        <source src="#" type="video/ogg"/>
+        <source src="#" type="video/webm"/>
+      </video>
 
-        <video class="production__video" width="10" height="10" controls preload="metadata" poster="#">
-          <source src="#" type="video/mp4">
-          <source src="#" type="video/ogg">
-          <source src="#" type="video/webm">
-        </video>
+      <p class="production__content">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
 
-        <p class="production__content">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-
-        <a class="btn catalog-menu__btn">Сделать заказ</a>
-
-      </div>
+      <a class="btn production__btn" href="#">Сделать заказ</a>
 
     </section>
 
@@ -128,11 +87,11 @@
 
   <footer class="page-footer">
 
-    <ul class="page-footer__social social">
-      <li class="social__item"><a class="social__link social__link--inst" href="#" aria-label="Instagram"></a></li>
-      <li class="social__item"><a class="social__link social__link--fb" href="#" aria-label="Facebook"></a></li>
-      <li class="social__item"><a class="social__link social__link--tw" href="#" aria-label="Twitter"></a></li>
-    </ul>
+    <div class="page-footer__social social">
+      <a class="social__link social__link--inst" href="#">Инстаграм</a>
+      <a class="social__link social__link--fb" href="#">Фейсбук</a>
+      <a class="social__link social__link--tw" href="#">Вконтакте</a>
+    </div>>
 
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
@@ -140,6 +99,33 @@
     </div>
 
   </footer>
+
+  <div class="popup">
+
+    <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+
+      <p class="popup__title">Добавить в корзину</p>
+
+      <fieldset class="popup__area">
+
+        <legend class="popup__area__title">Выберите размер:</legend>
+
+        <input class="visually_hidden" type="checkbox" id="size1" name="size" checked>
+        <label for="size1">S</label>
+
+        <input class="visually_hidden" type="checkbox" id="size2" name="size">
+        <label for="size2">M</label>
+
+        <input class="visually_hidden" type="checkbox" id="size3" name="size">
+        <label for="size3">L</label>
+
+      </fieldset>
+
+      <button class="btn popup__btn" type="submit">Добавить</button>
+
+    </form>
+
+  </div>
 
 </body>
 
