@@ -1,0 +1,46 @@
+.popup__form {
+  label {
+    line-height: 16px;
+
+    display: inline-block;
+
+    padding: 20px 37px;
+
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  input[type='checkbox']:checked + label {
+    padding: 19px 36px;
+
+    border: 1px solid #444;
+  }
+}
+.popup__title {
+  text-align: center;
+
+  @include heading;
+}
+
+.popup__area {
+  text-align: center;
+
+  border: none;
+}
+
+.popup__area__title {
+  line-height: 30px;
+
+  margin-bottom: 28px;
+
+  @include content-text;
+}
+
+.popup__btn {
+  line-height: 16px;
+
+  margin: 0 auto;
+  padding: 16px 82px;
+
+  color: #fff;
+  background-color: $theme-color;
+}

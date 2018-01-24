@@ -1,0 +1,12 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+
+  height: 160px;
+  padding: 0 $glob-padding;
+
+  background-color: #f1f1f1;
+
+  justify-content: center;
+  align-items: center;
+}

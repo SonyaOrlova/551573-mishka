@@ -1,0 +1,63 @@
+.advantages {
+  @include list;
+}
+
+.advantages__feature {
+  position: relative;
+
+  padding-top: 85px;
+  &--eco {
+    &::before {
+      top: 30px;
+
+      background-image: url('../img/icon-feature-flower.svg');
+
+      @include pseudo-img(32px, 37px);
+    }
+  }
+  &--price {
+    &::before {
+      top: 30px;
+
+      background-image: url('../img/icon-feature-money.svg');
+
+      @include pseudo-img(47px, 27px);
+    }
+  }
+  &--photo-likes {
+    &::before {
+      top: 30px;
+
+      background-image: url('../img/icon-feature-heart.svg');
+
+      @include pseudo-img(35px, 27px);
+    }
+  }
+  &--handmade {
+    &::before {
+      top: 30px;
+
+      background-image: url('../img/icon-feature-ball.svg');
+
+      @include pseudo-img(35px, 34px);
+    }
+  }
+  &--local {
+    &::before {
+      top: 30px;
+
+      background-image: url('../img/icon-feature-rocket.svg');
+
+      @include pseudo-img(55px, 23px);
+    }
+  }
+  &--gift-pack {
+    &::before {
+      top: 30px;
+
+      background-image: url('../img/icon-feature-gift.svg');
+
+      @include pseudo-img(33px, 32px);
+    }
+  }
+}

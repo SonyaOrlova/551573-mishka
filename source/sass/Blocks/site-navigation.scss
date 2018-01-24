@@ -1,0 +1,59 @@
+.site-navigation {
+  line-height: 24px;
+}
+
+.site-navigation__toggle {
+  font-size: 0;
+
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  border: none;
+  background-image: url('../img/icon-menu-open.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.site-navigation__menu {
+  display: flex;
+  flex-direction: column;
+
+  @include list;
+  align-items: flex=start;
+}
+
+.site-navigation__elem {
+  position: relative;
+
+  padding: 32px 33px 30px 46px;
+
+  a {
+    line-height: 24px;
+  }
+
+  &--search {
+    &::before {
+      left: 0;
+
+      background-image: url('../img/icon-search.svg');
+
+      @include pseudo-img(18px, 18px);
+    }
+  }
+
+  &--basket-empty {
+    &::before {
+      left: 0;
+
+      background-image: url('../img/icon-cart.svg');
+
+      @include pseudo-img(18px, 18px);
+    }
+  }
+}

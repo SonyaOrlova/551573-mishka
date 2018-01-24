@@ -1,0 +1,45 @@
+.production {
+  margin-bottom: 100px;
+}
+
+.production__title {
+  line-height: 24px;
+
+  position: relative;
+
+  display: block;
+
+  padding-left: 90px;
+  &::before {
+    top: 10px;
+    left: 25px;
+
+    background-image: url('../img/icon-video.svg');
+
+    @include pseudo-img(32px, 22px);
+  }
+}
+
+.production__video-wrapper {
+  position: relative;
+
+  display: block;
+
+  background-image: url('../img/video-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  &::before {
+    background-image: url('../img/icon-play.svg');
+
+    @include centering-abs;
+    @include pseudo-img(101px, 77px);
+  }
+}
+
+.production__content {
+  font-size: 13px;
+
+  margin-bottom: 50px;
+
+  @include content-text;
+}
