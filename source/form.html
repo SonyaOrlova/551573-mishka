@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Mishka</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize-min.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
 
     <div class="order">
 
-      <h1 class="page-main__title order__title">Вязание на заказ</h1>
+      <h1 class="page-main__title">Вязание на заказ</h1>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
@@ -44,10 +45,10 @@
 
           <legend class="form__caption">Тип</legend>
 
-          <input class="visually_hidden" type="radio" id="category1" name="category" checked>
+          <input class="visually-hidden form__radio" type="radio" id="category1" name="category" checked>
           <label for="category1">Аксессуар для интерьера</label>
 
-          <input class="visually_hidden" type="radio" id="category2" name="category">
+          <input class="visually-hidden form__radio" type="radio" id="category2" name="category">
           <label for="category2">Детская игрушка</label>
 
         </fieldset>
@@ -56,22 +57,22 @@
 
           <legend class="form__caption">Цвет</legend>
 
-          <input class="visually_hidden" type="checkbox" id="color1" name="color" checked>
+          <input class="visually-hidden form__checkbox" type="checkbox" id="color1" name="color" checked>
           <label for="color1">Белый</label>
 
-          <input class="visually_hidden" type="checkbox" id="color2" name="color" checked>
+          <input class="visually-hidden form__checkbox" type="checkbox" id="color2" name="color" checked>
           <label for="color2">Серый</label>
 
-          <input class="visually_hidden" type="checkbox" id="color3" name="color">
+          <input class="visually-hidden form__checkbox" type="checkbox" id="color3" name="color">
           <label for="color3">"Тиффани"</label>
 
-          <input class="visually_hidden" type="checkbox" id="color4" name="color">
+          <input class="visually-hidden form__checkbox" type="checkbox" id="color4" name="color">
           <label for="color4">Черный</label>
 
-          <input class="visually_hidden" type="checkbox" id="color5" name="color">
+          <input class="visually-hidden form__checkbox" type="checkbox" id="color5" name="color">
           <label for="color5">Розовый</label>
 
-          <input class="visually_hidden" type="checkbox" id="color6" name="color">
+          <input class="visually-hidden form__checkbox" type="checkbox" id="color6" name="color">
           <label for="color6">Оранжевый</label>
 
         </fieldset>
@@ -81,13 +82,13 @@
           <legend class="form__caption">ФИО</legend>
 
           <label for="name">Имя:</label>
-          <input type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+          <input class="form__text" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
 
           <label for="surname">Фамилия:</label>
-          <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+          <input class="form__text" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
 
           <label for="middle-name">Отчество:</label>
-          <input type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
+          <input class="form__text" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
 
         </fieldset>
 
@@ -111,7 +112,7 @@
 
           <legend class="form__caption">Доп</legend>
 
-          <textarea id="comment" name="comment" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="form__text form__textarea" id="comment" name="comment" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
 
         </fieldset>
 

@@ -1,46 +1,57 @@
 .popup__form {
-  label {
-    line-height: 16px;
+  padding: 35px $glob-padding 60px;
 
+  text-align: center;
+
+  label {
     display: inline-block;
 
-    padding: 20px 37px;
+    min-width: 82px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     cursor: pointer;
     vertical-align: middle;
-  }
-  input[type='checkbox']:checked + label {
-    padding: 19px 36px;
 
-    border: 1px solid #444;
+    border: 2px solid rgba(#444444, 0.2%);
   }
 }
+
+.popup__checkbox:checked + label {
+  border: 2px solid $theme-color;
+}
+
 .popup__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding: 0 55px;
+
   text-align: center;
 
-  @include heading;
+  @include h2;
 }
 
 .popup__area {
-  text-align: center;
+  margin-right: 0;
+  margin-bottom: 30px;
+  margin-left: 0;
+  padding: 0;
 
   border: none;
 }
 
 .popup__area__title {
-  line-height: 30px;
+  font-size: 15px;
+  font-weight: 400;
 
-  margin-bottom: 28px;
+  margin: 0 auto 28px;
+  /*line-height: 30px;*/
 
-  @include content-text;
+  color: #444444;
 }
 
 .popup__btn {
-  line-height: 16px;
-
-  margin: 0 auto;
-  padding: 16px 82px;
-
-  color: #fff;
+  color: #ffffff;
+  border: none;
   background-color: $theme-color;
 }

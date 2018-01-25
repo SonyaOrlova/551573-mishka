@@ -1,132 +1,152 @@
 .form {
-  input[type='radio'] + label,
-  input[type='checkbox'] + label {
-    line-height: 18px;
-
-    position: relative;
-
-    display: block;
-
-    padding: 25px 0 25px 64px;
-
-    cursor: pointer;
-  }
-  input + label::before {
-    top: 0;
-    bottom: 0;
-    left: 0;
-
-    margin: auto;
-  }
-  input[type='radio'] + label::before,
-  input[type='radio']:checked + label::before {
-    border: 1px solid #000;
-    border-radius: 50%;
-
-    @include pseudo(40px, 40px);
-  }
-  input[type='radio']:checked + label::after {
-    z-index: 2;
-    top: 0;
-    bottom: 0;
-    left: 0 + 10px;
-
-    margin: auto;
-
-    border-radius: 50%;
-    background-color: $theme-color;
-
-    @include pseudo(20px, 20px);
-  }
-  input[type='checkbox'] + label::before {
-    border: 1px solid #000;
-
-    @include pseudo(40px, 40px);
-  }
-  input[type='checkbox']:checked + label::before {
-    border: 1px solid #000;
-    background-image: url('../img/icon-tick.svg');
-
-    @include pseudo-img(40px, 40px);
-  }
-  input[type='text'],
-  input[type='tel'],
-  input[type='email'],
-  textarea {
-    font-size: 17px;
-    line-height: 18px;
-
-    display: block;
-
-    padding: 18px 0;
-
-    border: none;
-  }
-  textarea {
-    padding: 0 80px 0 18px;
-  }
-  input::-webkit-input-placeholder,
-  textarea::-webkit-input-placeholder {
-    font-weight: 400;
-
-    color: rgba(#444, .5%);
-  }
-  input::-moz-placeholder,
-  textarea::-moz-placeholder {
-    font-weight: 400;
-
-    color: rgba(#444, .5%);
-  }
-  input:-moz-placeholder,
-  textarea:-moz-placeholder {
-    font-weight: 400;
-
-    color: rgba(#444, .5%);
-  }
+  padding: $glob-padding;
 }
 
 .form__description {
   font-size: 13px;
+  font-weight: 400;
 
-  @include content-text;
+  color: #444444;
 }
 
 .form__area {
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+  padding: 0;
+
   border: none;
 }
 
 .form__caption {
   position: relative;
 
+  margin-bottom: 25px;
+
   text-transform: uppercase;
 
   color: $theme-color;
+
   &::after {
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 70px;
 
-    width: 100%;
+    display: block;
+
+    width: 200px;
+    height: 1px;
     margin: auto;
 
-    background-color: $theme-color;
+    content: "";
 
-    @include pseudo-img(200px, 1px);
+    background-color: $theme-color;
   }
+}
+
+.form__radio + label,
+.form__checkbox + label {
+  position: relative;
+
+  display: block;
+
+  padding: 25px 0 25px 64px;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+    content: "";
+
+    border: 1px solid #000000;
+  }
+}
+
+.form__radio + label,
+.form__radio:checked + label {
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.form__radio:checked + label {
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 11px;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin: auto;
+
+    content: "";
+
+    border-radius: 50%;
+    background-color: $theme-color;
+  }
+}
+
+.form__checkbox:checked + label {
+  &::before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.form__text {
+  display: block;
+
+  width: 100%;
+  margin-bottom: 25px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  &--tel {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.form__textarea {
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  padding-right: 80px;
+  padding-left: 18px;
 }
 
 .form__annotation {
   font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
 
-  color: #444;
+  color: #444444;
 }
 
-.form__btn {
-  margin: 0 auto;
-  padding: 20px 47px;
+input::placeholder,
+textarea::placeholder {
+  font-weight: 400;
 
-  border: none;
-  background-color: none;
+  color: rgba(#444444, 0.5%);
 }

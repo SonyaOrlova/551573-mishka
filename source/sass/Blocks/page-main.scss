@@ -1,3 +1,19 @@
-.page-main {
-  padding: 0 $glob-padding;
+.page-main__title {
+  font-size: 27px;
+  /*line-height: 30px;*/
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 75px 8px 80px;
+
+  text-align: center;
+
+  background-color: #f1f1f1;
+
+  &--transp {
+    padding-right: 38px;
+    padding-left: 38px;
+
+    background-color: transparent;
+  }
 }

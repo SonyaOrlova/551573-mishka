@@ -2,50 +2,33 @@
   width: 100%;
   height: auto;
 
-  background-image: url('../img/hero-mobile@1x.jpg');
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
 }
 
-.products .page-main__title {
-  margin-bottom: 250px;
-  padding: 0 8px;
-}
-
 .products__list {
-  @include list;
+  @include reset-list;
 }
 
 .products__item {
-  position: relative;
+  padding: $glob-padding;
 
-  padding: 30px;
-
-  background-color: $theme-color;
+  background-repeat: no-repeat;
 
   a {
-    color: #fff;
+    color: #ffffff;
   }
 
   &--interior {
-    &::before {
-      top: 10px;
-      right: 40px;
-
-      background-image: url('../img/icon-interior.svg');
-
-      @include pseudo-img(40px, 62px);
-    }
+    background-color: $theme-color;
+    background-image: url("../img/icon-interior.svg");
+    background-position: right 40px center;
   }
 
   &--toys {
-    &::before {
-      top: 10px;
-      right: 30px;
-
-      background-image: url('../img/icon-toy.svg');
-
-      @include pseudo-img(60px, 60px);
-    }
+    background-color: #56c3b2;
+    background-image: url("../img/icon-toy.svg");
+    background-position: right 30px center;
   }
 }

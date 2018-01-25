@@ -8,30 +8,22 @@
 .slider__button {
   font-size: 0;
 
-  position: relative;
-
   display: block;
 
-  width: 130px;
+  width: 50%;
   height: 52px;
 
-  border: 1px solid rgba(#444, .5%);
+  border: 1px solid rgba(#444444, 0.2%);
+  background-repeat: no-repeat;
+  background-position: center;
 
   &--prev {
     margin-right: 2px;
-    &::before {
-      background-image: url('../img/icon-left-arrow.svg');
 
-      @include pseudo-img(50px, 26px);
-      @include centering-abs;
-    }
+    background-image: url("../img/icon-left-arrow.svg");
   }
-  &--next {
-    &::before {
-      background-image: url('../img/icon-right-arrow.svg');
 
-      @include pseudo-img(50px, 26px);
-      @include centering-abs;
-    }
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
   }
 }

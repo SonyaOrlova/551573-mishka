@@ -4,19 +4,26 @@
 
 .contacts__title {
   font-size: 18px;
-  line-height: 30px;
+
+  padding: 0 $glob-padding;
+  /*line-height: 30px;*/
 }
 
-.contacts__item {
-  line-height: 30px;
+.contacts__content {
+  font-size: 15px;
+  font-weight: 400;
 
-  @include content-text;
+  padding: 0 $glob-padding;
+  /*line-height: 30px;*/
 }
 
 .contacts__type {
-  padding: 10px 32px 0 0;
+  font-weight: 400;
+
+  padding-right: 32px;
 
   text-align: left;
+  vertical-align: top;
   white-space: nowrap;
 }
 
@@ -24,3 +31,6 @@
   margin-bottom: 40px;
 }
 
+.contacts__wrapper-btn {
+  padding: 0 $glob-padding;
+}

@@ -1,8 +1,12 @@
-.week-hit__title {
-  @include heading;
+.week-hit {
+  padding: 0 $glob-padding;
 }
 
-.Week-hit__label {
+.week-hit__title {
+  @include h2;
+}
+
+.week-hit__label {
   text-transform: uppercase;
 
   color: $theme-color;
@@ -10,7 +14,10 @@
 
 .week-hit__about,
 .week-hit__features {
-  @include content-text;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: #444444;
 }
 
 .week-hit__features {
@@ -18,11 +25,12 @@
 }
 
 .week-hit__benefit {
-  border-bottom: 1px solid rgba(#444, .2%);
+  border-bottom: 1px solid rgba(#444444, 0.2%);
 }
 
 .week-hit__option {
-  padding: 10px 30px 0 0;
+  padding-top: 10px;
+  padding-right: 30px;
 
   text-align: left;
 }
@@ -30,10 +38,5 @@
 .week-hit__purchase {
   text-align: center;
 
-  color: #444;
-}
-
-.week-hit__price {
-  font-size: 17px;
-  line-height: 24px;
+  color: #444444;
 }
