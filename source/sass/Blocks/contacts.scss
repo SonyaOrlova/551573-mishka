@@ -1,0 +1,36 @@
+.contacts {
+  margin-bottom: 40px;
+}
+
+.contacts__title {
+  font-size: 18px;
+
+  padding: 0 $glob-padding;
+  /*line-height: 30px;*/
+}
+
+.contacts__content {
+  font-size: 15px;
+  font-weight: 400;
+
+  padding: 0 $glob-padding;
+  /*line-height: 30px;*/
+}
+
+.contacts__type {
+  font-weight: 400;
+
+  padding-right: 32px;
+
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.сontacts__map {
+  margin-bottom: 40px;
+}
+
+.contacts__wrapper-btn {
+  padding: 0 $glob-padding;
+}

@@ -1,0 +1,34 @@
+.products {
+  width: 100%;
+  height: auto;
+
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.products__list {
+  @include reset-list;
+}
+
+.products__item {
+  padding: $glob-padding;
+
+  background-repeat: no-repeat;
+
+  a {
+    color: #ffffff;
+  }
+
+  &--interior {
+    background-color: $theme-color;
+    background-image: url("../img/icon-interior.svg");
+    background-position: right 40px center;
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+    background-image: url("../img/icon-toy.svg");
+    background-position: right 30px center;
+  }
+}

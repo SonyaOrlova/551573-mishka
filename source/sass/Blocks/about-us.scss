@@ -1,0 +1,7 @@
+.about-us {
+  padding: 0 $glob-padding;
+}
+
+.about-us__title {
+  @include h2;
+}

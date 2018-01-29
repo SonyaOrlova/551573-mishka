@@ -1,0 +1,29 @@
+.slider__controls {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__button {
+  font-size: 0;
+
+  display: block;
+
+  width: 50%;
+  height: 52px;
+
+  border: 1px solid rgba(#444444, 0.2%);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--prev {
+    margin-right: 2px;
+
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+}

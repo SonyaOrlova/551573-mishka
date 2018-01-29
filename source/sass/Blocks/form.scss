@@ -1,0 +1,152 @@
+.form {
+  padding: $glob-padding;
+}
+
+.form__description {
+  font-size: 13px;
+  font-weight: 400;
+
+  color: #444444;
+}
+
+.form__area {
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.form__caption {
+  position: relative;
+
+  margin-bottom: 25px;
+
+  text-transform: uppercase;
+
+  color: $theme-color;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 70px;
+
+    display: block;
+
+    width: 200px;
+    height: 1px;
+    margin: auto;
+
+    content: "";
+
+    background-color: $theme-color;
+  }
+}
+
+.form__radio + label,
+.form__checkbox + label {
+  position: relative;
+
+  display: block;
+
+  padding: 25px 0 25px 64px;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+    content: "";
+
+    border: 1px solid #000000;
+  }
+}
+
+.form__radio + label,
+.form__radio:checked + label {
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+.form__radio:checked + label {
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 11px;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin: auto;
+
+    content: "";
+
+    border-radius: 50%;
+    background-color: $theme-color;
+  }
+}
+
+.form__checkbox:checked + label {
+  &::before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.form__text {
+  display: block;
+
+  width: 100%;
+  margin-bottom: 25px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  &--tel {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.form__textarea {
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  padding-right: 80px;
+  padding-left: 18px;
+}
+
+.form__annotation {
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #444444;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-weight: 400;
+
+  color: rgba(#444444, 0.5%);
+}

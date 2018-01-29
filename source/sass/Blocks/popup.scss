@@ -1,0 +1,57 @@
+.popup__form {
+  padding: 35px $glob-padding 60px;
+
+  text-align: center;
+
+  label {
+    display: inline-block;
+
+    min-width: 82px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    cursor: pointer;
+    vertical-align: middle;
+
+    border: 2px solid rgba(#444444, 0.2%);
+  }
+}
+
+.popup__checkbox:checked + label {
+  border: 2px solid $theme-color;
+}
+
+.popup__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding: 0 55px;
+
+  text-align: center;
+
+  @include h2;
+}
+
+.popup__area {
+  margin-right: 0;
+  margin-bottom: 30px;
+  margin-left: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.popup__area__title {
+  font-size: 15px;
+  font-weight: 400;
+
+  margin: 0 auto 28px;
+  /*line-height: 30px;*/
+
+  color: #444444;
+}
+
+.popup__btn {
+  color: #ffffff;
+  border: none;
+  background-color: $theme-color;
+}
