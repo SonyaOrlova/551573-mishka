@@ -1,3 +1,12 @@
+.copyright {
+  width: 100%;
+  padding-top: 28px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(#444444, 0.2%);
+}
+
 .copyright__text {
   font-size: 19px;
 
@@ -17,4 +26,13 @@
   background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: auto;
+    padding-top: 0;
+
+    border-top: none;
+  }
 }

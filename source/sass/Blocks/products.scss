@@ -1,10 +1,15 @@
 .products {
-  width: 100%;
-  height: auto;
+  margin-bottom: 35px;
 
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
+}
+
+.products__wrapper {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .products__list {
@@ -12,23 +17,71 @@
 }
 
 .products__item {
-  padding: $glob-padding;
+  display: flex;
+
+  height: 100px;
+  padding: 0 9.375%;
 
   background-repeat: no-repeat;
 
-  a {
-    color: #ffffff;
-  }
+  align-items: center;
 
   &--interior {
     background-color: $theme-color;
     background-image: url("../img/icon-interior.svg");
-    background-position: right 40px center;
+    background-position: center right 10.825%;
   }
 
   &--toys {
     background-color: #56c3b2;
     background-image: url("../img/icon-toy.svg");
-    background-position: right 30px center;
+    background-position: center right 9.375%;
+  }
+}
+
+.products__link {
+  font-size: 19px;
+
+  width: 50%;
+
+  color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .products {
+    width: 100%;
+    margin: 0 auto 55px;
+  }
+
+  .products__wrapper {
+    width: 670px;
+  }
+
+  .products__list {
+    display: flex;
+  }
+
+  .products__item {
+    width: 50%;
+    height: 120px;
+    padding: 0 35px;
+  }
+
+  .products__link {
+    font-size: 20px;
+
+    width: 60%;
+    /* line-height: 30px; */
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .products {
+    width: 1150px;
+    margin-bottom: 75px;
+  }
+
+  .products__wrapper {
+    width: 1048px;
   }
 }

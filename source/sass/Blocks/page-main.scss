@@ -1,19 +1,63 @@
-.page-main__title {
-  font-size: 27px;
-  /*line-height: 30px;*/
-
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 75px 8px 80px;
-
-  text-align: center;
+.page-main__title-wrapper {
+  margin-bottom: 30px;
+  padding: 75px 0;
 
   background-color: #f1f1f1;
 
   &--transp {
-    padding-right: 38px;
-    padding-left: 38px;
+    margin-bottom: 120px;
+    padding-bottom: 0;
 
     background-color: transparent;
+  }
+}
+
+.page-main__title {
+  font-size: 27px;
+  line-height: 1.4em; /* Почему не реагирует на lh, заданный в body */
+  /* line-height: 30px; */
+
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__title-wrapper {
+    margin-bottom: 80px;
+    padding-top: 105px;
+    padding-bottom: 80px;
+
+    &--transp {
+      margin-bottom: 370px;
+      padding-top: 160px;
+    }
+  }
+
+  .page-main__title {
+    font-size: 43px;
+    /* line-height: 50px; */
+
+    width: 500px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title-wrapper {
+    margin-bottom: 130px;
+    padding-bottom: 100px;
+
+    &--transp {
+      margin-bottom: 355px;
+    }
+  }
+  .page-main__title {
+    font-size: 53px;
+    /* line-height: 57px; */
+
+    width: 615px;
   }
 }

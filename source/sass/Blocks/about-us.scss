@@ -1,7 +1,35 @@
 .about-us {
-  padding: 0 $glob-padding;
+  display: flex;
+
+  width: 260px;
+  margin: 0 auto 55px;
+
+  flex-wrap: wrap;
 }
 
 .about-us__title {
   @include h2;
+  margin-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    width: 670px;
+  }
+  .about-us__title {
+    width: 875px;
+    @include h2-tablet;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    width: 1048px;
+
+    justify-content: flex-end;
+  }
+  .about-us__title {
+    width: 875px;
+    @include h2-desktop;
+  }
 }
