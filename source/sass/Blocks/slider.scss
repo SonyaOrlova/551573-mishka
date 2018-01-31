@@ -27,3 +27,12 @@
     background-image: url("../img/icon-right-arrow.svg");
   }
 }
+
+@media (min-width: $tablet-width) {
+  .slider__controls {
+    width: 140px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,3 +1,7 @@
+.social {
+  padding-bottom: 28px;
+}
+
 .social__link {
   font-size: 0;
 
@@ -5,7 +9,6 @@
 
   width: 25px;
   height: 30px;
-  margin-bottom: 50px;
 
   vertical-align: middle;
 
@@ -26,5 +29,19 @@
 
   &--tw {
     background-image: url("../img/icon-twitter.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-right: 10.935%;
+    margin-left: auto;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    margin-right: 22.85%;
   }
 }

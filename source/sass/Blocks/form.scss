@@ -1,26 +1,27 @@
 .form {
-  padding: $glob-padding;
+  width: 260px;
+  margin: 0 auto 55px;
 }
 
 .form__description {
   font-size: 13px;
   font-weight: 400;
 
+  margin-top: 0;
+  margin-bottom: 40px;
+
   color: #444444;
 }
 
-.form__area {
-  margin-right: 0;
-  margin-bottom: 5px;
-  margin-left: 0;
-  padding: 0;
-
-  border: none;
+.form__area-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__caption {
   position: relative;
 
+  margin-top: 0;
   margin-bottom: 25px;
 
   text-transform: uppercase;
@@ -30,8 +31,8 @@
   &::after {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
-    left: 70px;
 
     display: block;
 
@@ -43,6 +44,11 @@
 
     background-color: $theme-color;
   }
+
+  &--email,
+  &--tel {
+    margin-bottom: 5px;
+  }
 }
 
 .form__radio + label,
@@ -51,9 +57,14 @@
 
   display: block;
 
-  padding: 25px 0 25px 64px;
+  box-sizing: border-box;
+  min-height: 40px;
+  margin-bottom: 25px;
+  padding-top: 8px;
+  padding-left: 65px;
 
   cursor: pointer;
+  vertical-align: middle;
 
   &::before {
     position: absolute;
@@ -63,13 +74,14 @@
 
     display: block;
 
+    box-sizing: border-box;
     width: 40px;
     height: 40px;
     margin: auto;
 
     content: "";
 
-    border: 1px solid #000000;
+    border: 2px solid #000000;
   }
 }
 
@@ -85,12 +97,12 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 11px;
+    left: 12px;
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin: auto;
 
     content: "";
@@ -105,12 +117,14 @@
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 22px 16px;
   }
 }
 
 .form__text {
   display: block;
 
+  box-sizing: border-box;
   width: 100%;
   margin-bottom: 25px;
   padding-top: 18px;
@@ -118,6 +132,7 @@
 
   border: none;
   border-bottom: 2px solid #000000;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center right;
 
@@ -131,10 +146,11 @@
 }
 
 .form__textarea {
-  border: 2px solid #000000;
   box-sizing: border-box;
   padding-right: 80px;
   padding-left: 18px;
+
+  border: 2px solid #000000;
 }
 
 .form__annotation {
@@ -149,4 +165,136 @@ textarea::placeholder {
   font-weight: 400;
 
   color: rgba(#444444, 0.5%);
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .form__description {
+    font-size: 17px;
+
+    width: 670px;
+    margin: 0 auto 10px;
+  }
+
+  .form__area {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    &--color,
+    &--contacts {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .form__area-wrapper {
+    flex-direction: row;
+
+    width: 670px;
+    margin: 0 auto;
+  }
+
+  .form__caption {
+    width: 23%;
+    padding-top: 15px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__field {
+    display: flex;
+
+    width: 77%;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-inner {
+      display: flex;
+
+      width: 100%;
+
+      label {
+        margin-right: 25px;
+        padding-top: 18px;
+      }
+    }
+
+    &--submit {
+      width: 100%;
+
+      justify-content: space-between;
+    }
+  }
+
+  .form__radio + label,
+  .form__checkbox + label {
+    min-height: 53px;
+    padding-top: 15px;
+    padding-left: 80px;
+
+    &::before {
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  .form__radio + label {
+    width: 100%;
+  }
+
+  .form__checkbox + label {
+    width: 50%;
+  }
+
+  .form__radio:checked + label {
+    &::after {
+      left: 16px;
+
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .form__checkbox:checked + label {
+    &::before {
+      background-size: 33px 22px;
+    }
+  }
+
+  .form__text {
+    padding-left: 18px;
+  }
+
+  .form__btn {
+    width: 230px;
+
+    order: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__area-wrapper {
+    width: 875px;
+  }
+
+  .form__caption {
+    width: 15%;
+  }
+
+  .form__field {
+    width: 85%;
+
+    &--submit {
+      margin-left: auto;
+    }
+  }
+
+  .form__checkbox + label {
+    width: 30%;
+  }
 }

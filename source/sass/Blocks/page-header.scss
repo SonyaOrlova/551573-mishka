@@ -1,9 +1,25 @@
-.page-header {
-  padding: 22px $glob-padding;
-}
-
 .page-header__logo {
   display: block;
 
+  margin-bottom: 22px;
+
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    height: 88px;
+
+    border-bottom: 1px solid rgba(#444444, 0.2%);
+  }
+
+  .page-header__logo {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    order: 1;
+  }
 }

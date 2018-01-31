@@ -9,4 +9,16 @@
 @mixin h2() {
   font-size: 25px;
   line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin h2-tablet() {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin h2-desktop() {
+  font-size: 53px;
+  line-height: 57px;
 }
