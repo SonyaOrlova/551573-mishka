@@ -1,35 +1,43 @@
 .about-us {
-  display: flex;
-
-  width: 260px;
-  margin: 0 auto 55px;
-
-  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto 30px;
+  padding: 0 30px;
 }
 
 .about-us__title {
-  @include h2;
   margin-bottom: 30px;
+
+  @include h2;
 }
 
 @media (min-width: $tablet-width) {
   .about-us {
-    width: 670px;
+    width: 768px;
+    margin-bottom: 25px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
+
   .about-us__title {
-    width: 875px;
     @include h2-tablet;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about-us {
-    width: 1048px;
-
-    justify-content: flex-end;
+    width: 1250px;
+    margin-bottom: 35px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
-  .about-us__title {
+
+  .about-us__wrapper {
     width: 875px;
+    margin-left: auto;
+  }
+
+  .about-us__title {
     @include h2-desktop;
   }
 }

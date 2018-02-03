@@ -1,26 +1,13 @@
-.page-header {
-  position: relative;
-}
-
 .page-header__logo {
   display: block;
 
-  margin-bottom: 22px;
+  margin: 22px 30px;
 
   text-align: center;
 }
 
 .page-header__delivery-info {
-  font-size: 15px;
-  font-weight: 400;
-
   display: none;
-
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 20px;
-
-  color: #444;
 }
 
 @media (min-width: $tablet-width) {
@@ -31,26 +18,37 @@
   }
 
   .page-header__logo {
-    margin-top: 22px;
+    margin-right: 0;
+    margin-left: 0;
+
+    order: 1;
   }
 
   .page-header__delivery-info {
+    font-size: 15px;
+    font-weight: 400;
+
     display: flex;
 
-    order: 3;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-left: 30px;
+
+    color: #444;
+
+    order: 4;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__logo {
-    order: 1;
+    order: 2;
   }
 
   .page-header__delivery-info {
-    position: absolute;
-    right: 0;
-    bottom: 30px;
-
-    padding-top: 0;
+    order: 4;
+    /* Нужна помощь, как поставить элемент на место */
   }
 }

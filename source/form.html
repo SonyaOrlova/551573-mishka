@@ -10,148 +10,80 @@
 
 <body>
 
- <header class="page-header">
 
-  <nav class="header-navigation">
+  <header class="page-header">
 
-    <a class="page-header__logo" href="index.html">
-      <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka. Милые штуки ручной работы">
-    </a>
+    <nav class="header-navigation">
 
-    <button class="header-navigation__toggle" type="button">Меню</button>
+      <a class="page-header__logo" href="index.html">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka. Милые штуки ручной работы">
+      </a>
 
-    <ul class="header-navigation__menu header-navigation__menu--site">
+      <button class="header-navigation__toggle header-navigation__toggle--open header-navigation__toggle--nojs" type="button">Меню</button>
 
-      <li class="header-navigation__elem header-navigation__elem--site">
-        <a class="header-navigation__link" href="catalog.html">Каталог товаров</a>
-      </li>
+      <ul class="header-navigation__menu header-navigation__menu--site">
 
-      <li class="header-navigation__elem header-navigation__elem--site">
-        <a class="header-navigation__link" href="#">Вязание на заказ</a>
-      </li>
+        <li class="header-navigation__elem">
+          <a class="header-navigation__link header-navigation__link--site" href="catalog.html">Каталог товаров</a>
+        </li>
 
-    </ul>
+        <li class="header-navigation__elem">
+          <a class="header-navigation__link header-navigation__link--site" href="#">Вязание на заказ</a>
+        </li>
 
-    <ul class="header-navigation__menu header-navigation__menu--add">
+        <li class="header-navigation__elem header-navigation__elem--hidden">
+          <a class="header-navigation__link header-navigation__link--site header-navigation__link--hidden" href="#">Новые поступления</a>
+        </li>
 
-      <li class="header-navigation__elem header-navigation__elem--add header-navigation__elem--hidden">
-        <a class="header-navigation__link" href="#">Новые поступления</a>
-      </li>
+        <li class="header-navigation__elem header-navigation__elem--hidden">
+          <a class="header-navigation__link header-navigation__link--site header-navigation__link--hidden" href="#">Распродажа</a>
+        </li>
 
-      <li class="header-navigation__elem header-navigation__elem--add header-navigation__elem--hidden">
-        <a class="header-navigation__link" href="#">Распродажа</a>
-      </li>
+      </ul>
 
-      <li class="header-navigation__elem header-navigation__elem--add header-navigation__elem--delivery">
-        <a class="header-navigation__link" href="#">Бесплатная доставка по России</a>
-      </li>
+      <ul class="header-navigation__menu header-navigation__menu--user">
 
-    </ul>
+        <li class="header-navigation__elem">
+          <a class="header-navigation__link header-navigation__link--user header-navigation__link--search" href="#">Поиск по сайту</a>
+        </li>
 
-    <ul class="header-navigation__menu header-navigation__menu--user">
+        <li class="header-navigation__elem">
+          <a class="header-navigation__link header-navigation__link--user header-navigation__link--basket-empty" href="#">Корзина: пока пуста</a>
+        </li>
 
-      <li class="header-navigation__elem header-navigation__elem--search">
-        <a class="header-navigation__link header-navigation__link--search" href="#">Поиск по сайту</a>
-      </li>
+      </ul>
 
-      <li class="header-navigation__elem header-navigation__elem--basket-empty">
-        <a class="header-navigation__link header-navigation__link--basket-empty" href="#">Корзина: пока пуста</a>
-      </li>
+      <p class="page-header__delivery-info">Бесплатная доставка по России</p>
 
-    </ul>
+    </nav>
 
-  </nav>
+  </header>
 
-</header>
+  <main class="page-main">
 
-<main class="page-main">
-
-  <div class="page-main__title-wrapper">
-    <h1 class="page-main__title">Вязание на заказ</h1>
-  </div>
-
-  <form class="form" action="https://echo.htmlacademy.ru" method="post">
-
-    <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
-
-    <div class="form__area">
-
-      <div class="form__area-wrapper">
-
-        <p class="form__caption">Тип</p>
-
-        <div class="form__field">
-
-          <input class="visually-hidden form__radio" type="radio" id="category1" name="category" checked>
-          <label for="category1">Аксессуар для интерьера</label>
-
-          <input class="visually-hidden form__radio" type="radio" id="category2" name="category">
-          <label for="category2">Детская игрушка</label>
-
-        </div>
-
+    <div class="page-main__title-container">
+      <div class="page-main__title-wrapper">
+        <h1 class="page-main__title">Вязание на заказ</h1>
       </div>
-
     </div>
 
-    <div class="form__area form__area--color">
+    <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
-      <div class="form__area-wrapper">
+      <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-        <p class="form__caption">Цвет</p>
+      <div class="form__area">
 
-        <div class="form__field">
+        <div class="form__area-wrapper">
 
-          <input class="visually-hidden form__checkbox" type="checkbox" id="color1" name="color" checked>
-          <label for="color1">Белый</label>
+          <p class="form__caption">Тип</p>
 
-          <input class="visually-hidden form__checkbox" type="checkbox" id="color2" name="color" checked>
-          <label for="color2">Серый</label>
+          <div class="form__field">
 
-          <input class="visually-hidden form__checkbox" type="checkbox" id="color3" name="color">
-          <label for="color3">"Тиффани"</label>
+            <input class="visually-hidden form__radio" type="radio" id="category1" name="category" checked>
+            <label for="category1">Аксессуар для интерьера</label>
 
-          <input class="visually-hidden form__checkbox" type="checkbox" id="color4" name="color">
-          <label for="color4">Черный</label>
-
-          <input class="visually-hidden form__checkbox" type="checkbox" id="color5" name="color">
-          <label for="color5">Розовый</label>
-
-          <input class="visually-hidden form__checkbox" type="checkbox" id="color6" name="color">
-          <label for="color6">Оранжевый</label>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="form__area">
-
-      <div class="form__area-wrapper">
-
-        <p class="form__caption">ФИО</p>
-
-        <div class="form__field">
-
-          <div class="form__field-inner">
-
-            <label for="name">Имя:</label>
-            <input class="form__text form__text--name" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
-
-          </div>
-
-          <div class="form__field-inner">
-
-            <label for="surname">Фамилия:</label>
-            <input class="form__text form__text--name" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
-
-          </div>
-
-          <div class="form__field-inner">
-
-            <label for="middle-name">Отчество:</label>
-            <input class="form__text form__text--name" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
+            <input class="visually-hidden form__radio" type="radio" id="category2" name="category">
+            <label for="category2">Детская игрушка</label>
 
           </div>
 
@@ -159,94 +91,159 @@
 
       </div>
 
-    </div>
+      <div class="form__area form__area--color">
 
-    <div class="form__area form__area--contacts">
+        <div class="form__area-wrapper">
 
-      <div class="form__area-wrapper">
+          <p class="form__caption">Цвет</p>
 
-        <p class="form__caption form__caption--tel">Тел</p>
+          <div class="form__field">
 
-        <div class="form__field">
+            <input class="visually-hidden form__checkbox" type="checkbox" id="color1" name="color" checked>
+            <label for="color1">Белый</label>
 
-          <input class="form__text form__text--tel" type="tel" id="tel" name="tel" pattern="\+7\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 XXX XX XX*" required>
+            <input class="visually-hidden form__checkbox" type="checkbox" id="color2" name="color" checked>
+            <label for="color2">Серый</label>
 
-        </div>
+            <input class="visually-hidden form__checkbox" type="checkbox" id="color3" name="color">
+            <label for="color3">"Тиффани"</label>
 
-      </div>
+            <input class="visually-hidden form__checkbox" type="checkbox" id="color4" name="color">
+            <label for="color4">Черный</label>
 
-      <div class="form__area-wrapper">
+            <input class="visually-hidden form__checkbox" type="checkbox" id="color5" name="color">
+            <label for="color5">Розовый</label>
 
-        <p class="form__caption form__caption--email">E-mail</p>
+            <input class="visually-hidden form__checkbox" type="checkbox" id="color6" name="color">
+            <label for="color6">Оранжевый</label>
 
-        <div class="form__field">
-
-          <input class="form__text form__text--email" type="email" id="email" name="email" placeholder="Ваш email*" required>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="form__area">
-
-      <div class="form__area-wrapper">
-
-        <p class="form__caption">Доп</p>
-
-        <div class="form__field">
-
-          <textarea class="form__text form__textarea" id="comment" name="comment" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+      <div class="form__area">
 
-    <div class="form__area">
+        <div class="form__area-wrapper">
 
-      <div class="form__area-wrapper">
+          <p class="form__caption">ФИО</p>
 
-        <div class="form__field form__field--submit">
+          <div class="form__field">
 
-          <p class="form__annotation">*Поля обязательны для заполнения</p>
+            <div class="form__field-inner">
 
-          <button class="btn form__btn" type="submit">Отправить заказ</button>
+              <label class="form__text-label" for="name">Имя:</label>
+              <input class="form__text form__text--name" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+
+            </div>
+
+            <div class="form__field-inner">
+
+              <label class="form__text-label" for="surname">Фамилия:</label>
+              <input class="form__text form__text--name" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+
+            </div>
+
+            <div class="form__field-inner">
+
+              <label class="form__text-label" for="middle-name">Отчество:</label>
+              <input class="form__text form__text--name" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
+
+            </div>
+
+          </div>
 
         </div>
 
       </div>
 
+      <div class="form__area form__area--contacts">
+
+        <div class="form__area-wrapper">
+
+          <p class="form__caption form__caption--tel">Тел</p>
+
+          <div class="form__field">
+
+            <input class="form__text form__text--tel" type="tel" id="tel" name="tel" pattern="\+7\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" placeholder="+7 XXX XX XX*" required>
+
+          </div>
+
+        </div>
+
+        <div class="form__area-wrapper">
+
+          <p class="form__caption form__caption--email">E-mail</p>
+
+          <div class="form__field">
+
+            <input class="form__text form__text--email" type="email" id="email" name="email" placeholder="Ваш email*" required>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="form__area">
+
+        <div class="form__area-wrapper">
+
+          <p class="form__caption">Доп</p>
+
+          <div class="form__field">
+
+            <textarea class="form__text form__textarea" id="comment" name="comment" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="form__area">
+
+        <div class="form__area-wrapper">
+
+          <div class="form__field form__field--submit">
+
+            <p class="form__annotation">*Поля обязательны для заполнения</p>
+
+            <button class="btn form__btn" type="submit">Отправить заказ</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </form>
+
+  </main>
+
+  <footer class="page-footer">
+
+    <div class="page-footer__wrapper">
+
+      <p class="page-footer__logo">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka. Милые штуки ручной работы">
+      </p>
+
+      <div class="page-footer__social social">
+        <a class="social__link social__link--inst" href="#">Инстаграм</a>
+        <a class="social__link social__link--fb" href="#">Фейсбук</a>
+        <a class="social__link social__link--tw" href="#">Вконтакте</a>
+      </div>
+
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+
     </div>
 
-  </form>
-
-</main>
-
-<footer class="page-footer">
-
-  <div class="page-footer__wrapper">
-
-    <p class="page-footer__logo">
-      <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka. Милые штуки ручной работы">
-    </p>
-
-    <div class="page-footer__social social">
-      <a class="social__link social__link--inst" href="#">Инстаграм</a>
-      <a class="social__link social__link--fb" href="#">Фейсбук</a>
-      <a class="social__link social__link--tw" href="#">Вконтакте</a>
-    </div>
-
-    <div class="page-footer__copyright copyright">
-      <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 </body>
 

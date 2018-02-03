@@ -1,6 +1,7 @@
 .popup__form {
   box-sizing: border-box;
   width: 320px;
+  min-height: 336px;
   margin: 30px auto;/*временно*/
   padding: 35px 30px 45px;
 
@@ -14,7 +15,7 @@
 
     cursor: pointer;
 
-    border: 2px solid rgba(#444444, 0.2%);
+    border: 2px solid rgba(#444, .2%);
   }
 }
 
@@ -23,11 +24,11 @@
 }
 
 .popup__title {
-  @include h2;
-  margin-bottom: 25px;
-
   text-align: center;
   text-transform: uppercase;
+
+  @include h2;
+  margin-bottom: 25px;
 }
 
 .popup__area {
@@ -45,11 +46,13 @@
   margin: 0 auto 28px;
   /*line-height: 30px;*/
 
-  color: #444444;
+  color: #444;
 }
 
 .popup__btn {
-  color: #ffffff;
+  width: 100%;
+
+  color: #fff;
   border: none;
   background-color: $theme-color;
 }
@@ -57,10 +60,9 @@
 @media (min-width: $tablet-width) {
   .popup__form {
     width: 566px;
-    min-height: 336px;
     padding: 50px 105px;
 
-    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+    box-shadow: 0 5px 10px rgba(0, 1, 1, .25);
 
     label {
       padding-right: 48px;

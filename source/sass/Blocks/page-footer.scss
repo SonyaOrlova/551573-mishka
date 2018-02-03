@@ -1,8 +1,5 @@
 .page-footer {
-  box-sizing: border-box;
-  height: 160px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  min-height: 160px;
 
   background-color: #f1f1f1;
 }
@@ -11,10 +8,13 @@
   display: flex;
   flex-direction: column;
 
-  width: 260px;
+  box-sizing: border-box;
+  width: 320;
   margin: 0 auto;
+  padding: 25px 30px;
 
-  justify-content: center;
+  background-color: #f1f1f1;
+
   align-items: center;
 }
 
@@ -24,24 +24,30 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    height: 143px;
+    min-height: 143px;
   }
 
   .page-footer__wrapper {
     flex-direction: row;
 
-    width: 670px;
+    width: 768;
+    padding: 50px;
 
     justify-content: space-between;
   }
 
   .page-footer__logo {
     display: block;
+
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer__wrapper {
-    width: 1048px;
+    width: 1250px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }

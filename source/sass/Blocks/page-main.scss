@@ -1,14 +1,20 @@
-.page-main__title-wrapper {
-  margin-bottom: 30px;
-  padding: 75px 0;
-
+.page-main__title-container {
   background-color: #f1f1f1;
+
+  &--transp {
+    background-color: transparent;
+  }
+}
+
+.page-main__title-wrapper {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto 30px;
+  padding: 75px 30px;
 
   &--transp {
     margin-bottom: 120px;
     padding-bottom: 0;
-
-    background-color: transparent;
   }
 }
 
@@ -17,19 +23,18 @@
   line-height: 1.4em; /* Почему не реагирует на lh, заданный в body */
   /* line-height: 30px; */
 
-  width: 250px;
-  margin: 0 auto;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0 10px;
 
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .page-main__title-wrapper {
+    width: 768px;
     margin-bottom: 80px;
-    padding-top: 105px;
-    padding-bottom: 80px;
+    padding: 105px 50px 80px;
 
     &--transp {
       margin-bottom: 370px;
@@ -39,25 +44,29 @@
 
   .page-main__title {
     font-size: 43px;
-    /* line-height: 50px; */
 
-    width: 500px;
+    padding-right: 80px;
+    /* line-height: 50px; */
+    padding-left: 80px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-main__title-wrapper {
+    width: 1250px;
     margin-bottom: 130px;
-    padding-bottom: 100px;
+    padding: 105px 100px 100px;
 
     &--transp {
       margin-bottom: 355px;
+      padding-top: 160px;
     }
   }
   .page-main__title {
     font-size: 53px;
-    /* line-height: 57px; */
 
-    width: 615px;
+    padding-right: 225px;
+    /* line-height: 57px; */
+    padding-left: 225px;
   }
 }

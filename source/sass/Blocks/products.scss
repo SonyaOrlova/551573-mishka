@@ -1,87 +1,91 @@
 .products {
   margin-bottom: 35px;
 
-  background-image: url("../img/hero-mobile@1x.jpg");
+  background-image: url('../img/hero-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 }
 
-.products__wrapper {
+.products__item {
+  box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
-}
-
-.products__list {
-  @include reset-list;
-}
-
-.products__item {
-  display: flex;
-
-  height: 100px;
-  padding: 0 9.375%;
-
-  background-repeat: no-repeat;
-
-  align-items: center;
 
   &--interior {
     background-color: $theme-color;
-    background-image: url("../img/icon-interior.svg");
-    background-position: center right 10.825%;
   }
 
   &--toys {
     background-color: #56c3b2;
-    background-image: url("../img/icon-toy.svg");
-    background-position: center right 9.375%;
   }
 }
 
 .products__link {
   font-size: 19px;
 
-  width: 50%;
+  display: block;
 
-  color: #ffffff;
+  padding: 30px 185px 30px 30px;
+
+  color: #fff;
+  background-repeat: no-repeat;
+
+  &--interior {
+    background-image: url('../img/icon-interior.svg');
+    background-position: center right 40px;
+  }
+
+  &--toys {
+    background-image: url('../img/icon-toy.svg');
+    background-position: center right 30px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .products {
-    width: 100%;
-    margin: 0 auto 55px;
+    margin-bottom: 55px;
   }
 
   .products__wrapper {
-    width: 670px;
+    box-sizing: border-box;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 50px;
   }
 
-  .products__list {
+  .products__items {
     display: flex;
+
+    flex-wrap: wrap;
   }
 
   .products__item {
     width: 50%;
-    height: 120px;
-    padding: 0 35px;
   }
 
   .products__link {
     font-size: 20px;
-
-    width: 60%;
     /* line-height: 30px; */
+
+    &--toys {
+      background-position: center right 35px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .products {
-    width: 1150px;
-    margin-bottom: 75px;
+    margin-bottom: 70px;
   }
 
   .products__wrapper {
-    width: 1048px;
+    width: 1250px;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .products__link {
+    padding-right: 375px;
   }
 }

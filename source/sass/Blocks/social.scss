@@ -1,5 +1,5 @@
 .social {
-  padding-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .social__link {
@@ -9,6 +9,7 @@
 
   width: 25px;
   height: 30px;
+  margin-right: 25px;
 
   vertical-align: middle;
 
@@ -16,32 +17,25 @@
   background-position: center;
 
   &--inst {
-    margin-right: 25px;
-
-    background-image: url("../img/icon-insta.svg");
+    background-image: url('../img/icon-insta.svg');
   }
 
   &--fb {
-    margin-right: 25px;
-
-    background-image: url("../img/icon-fb.svg");
+    background-image: url('../img/icon-fb.svg');
   }
 
   &--tw {
-    background-image: url("../img/icon-twitter.svg");
+    background-image: url('../img/icon-twitter.svg');
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 
 @media (min-width: $tablet-width) {
   .social {
-    margin-right: 10.935%;
-    margin-left: auto;
+    margin-bottom: 0;
     padding-bottom: 0;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .social {
-    margin-right: 22.85%;
   }
 }
