@@ -1,31 +1,120 @@
 .review {
-  padding: 0 $glob-padding;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto 90px;
+  padding: 0 30px;
 }
 
 .review__title {
   @include h2;
+
+  margin-bottom: 40px;
+
 }
 
 .review__item {
+  display: flex;
+
   margin: 0;
+
+  flex-wrap: wrap;
 }
 
-/* как сбросить курсив? */
-.review__text,
-.review__author--nick {
+.review__text {
   font-size: 15px;
   font-weight: 400;
-  /*
+
+  margin-top: 0;
+  margin-bottom: 40px;
+    /*
   line-height: 30px;
   */
 
-  color: #444444;
+  color: #444;
 }
 
 .review__footer {
+  width: 100%;
   margin-bottom: 35px;
 }
 
-.review__btn {
-  margin-top: 38px;
+.review__author {
+  font-size: 17px;
+  font-style: normal; /*не работает*/
+
+  display: block;
+
+  &--name {
+    margin-bottom: 10px;
+  }
+
+  &--nick {
+    font-weight: normal;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .review {
+    width: 768px;
+    margin-bottom: 155px;
+    padding: 80px 50px 50px;
+
+    background-image: url('../img/review@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  .review__wrapper {
+    position: relative;
+  }
+
+  .review__title {
+    margin-bottom: 60px;
+
+    @include h2-tablet;
+  }
+
+  .review__text {
+    font-size: 17px;
+
+    margin-bottom: 60px;
+    padding-right: 105px;
+  }
+
+  .review__footer {
+    margin-bottom: 0;
+  }
+
+  .review__author--name {
+    font-size: 18px;
+  }
+
+  .review__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    box-sizing: border-box;
+    width: 175px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review {
+    width: 1250px;
+    padding: 80px 100px 100px;
+  }
+
+  .review__wrapper {
+    width: 875px;
+    margin-left: auto;
+  }
+
+  .review__text {
+    margin-bottom: 40px;
+  }
+
+  .review__author--name {
+    font-size: 17px;
+  }
 }

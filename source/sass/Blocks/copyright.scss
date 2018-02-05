@@ -1,7 +1,20 @@
+.copyright {
+  width: 100%;
+  padding-top: 28px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(#444, .2%);
+}
+
 .copyright__text {
   font-size: 19px;
 
+  display: inline-block;
+
   margin-right: 30px;
+
+  vertical-align: middle;
 }
 
 .copyright__link {
@@ -14,7 +27,16 @@
 
   vertical-align: middle;
 
-  background-image: url("../img/logo-htmlacademy.svg");
+  background-image: url('../img/logo-htmlacademy.svg');
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: auto;
+    padding-top: 0;
+
+    border-top: none;
+  }
 }

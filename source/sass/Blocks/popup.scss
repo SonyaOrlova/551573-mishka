@@ -1,19 +1,21 @@
 .popup__form {
-  padding: 35px $glob-padding 60px;
+  box-sizing: border-box;
+  width: 320px;
+  min-height: 336px;
+  margin: 30px auto;/*временно*/
+  padding: 35px 30px 45px;
 
   text-align: center;
 
   label {
     display: inline-block;
 
-    min-width: 82px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
+    padding: 20px 34px;
 
     cursor: pointer;
-    vertical-align: middle;
 
-    border: 2px solid rgba(#444444, 0.2%);
+    border: 2px solid rgba(#444, .2%);
   }
 }
 
@@ -22,36 +24,60 @@
 }
 
 .popup__title {
-  margin-top: 0;
-  margin-bottom: 25px;
-  padding: 0 55px;
-
   text-align: center;
+  text-transform: uppercase;
 
   @include h2;
+  margin-bottom: 25px;
 }
 
 .popup__area {
   margin-right: 0;
-  margin-bottom: 30px;
   margin-left: 0;
   padding: 0;
 
   border: none;
 }
 
-.popup__area__title {
+.popup__caption {
   font-size: 15px;
   font-weight: 400;
 
   margin: 0 auto 28px;
   /*line-height: 30px;*/
 
-  color: #444444;
+  color: #444;
 }
 
 .popup__btn {
-  color: #ffffff;
+  width: 100%;
+
+  color: #fff;
   border: none;
   background-color: $theme-color;
+}
+
+@media (min-width: $tablet-width) {
+  .popup__form {
+    width: 566px;
+    padding: 50px 105px;
+
+    box-shadow: 0 5px 10px rgba(0, 1, 1, .25);
+
+    label {
+      padding-right: 48px;
+      padding-left: 48px;
+    }
+  }
+
+  .popup__title {
+    font-size: 30px;
+    /*line-height: 57px;*/
+
+    margin-bottom: 30px;
+  }
+
+  .popup__caption {
+    font-size: 17px;
+  }
 }

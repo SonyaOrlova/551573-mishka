@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid red;
+}
+
 body {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
@@ -9,6 +13,7 @@ body {
 
   margin: 0;
   padding: 0;
+  min-width: 320px;
 }
 
 a {
@@ -33,4 +38,10 @@ input[type="radio"].visually-hidden {
   border: 0;
 
   clip-path: inset(100%);
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    font-size: 20px;
+  }
 }
