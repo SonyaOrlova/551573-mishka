@@ -8,8 +8,7 @@
 .review__title {
   @include h2;
 
-  margin-bottom: 40px;
-
+  margin-bottom: 23px;
 }
 
 .review__item {
@@ -23,14 +22,12 @@
 .review__text {
   font-size: 15px;
   font-weight: 400;
+  line-height: 30px;
 
   margin-top: 0;
-  margin-bottom: 40px;
-    /*
-  line-height: 30px;
-  */
+  margin-bottom: 28px;
 
-  color: #444;
+  color: #444444;
 }
 
 .review__footer {
@@ -45,7 +42,7 @@
   display: block;
 
   &--name {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   &--nick {
@@ -56,10 +53,10 @@
 @media (min-width: $tablet-width) {
   .review {
     width: 768px;
-    margin-bottom: 155px;
+    margin-bottom: 125px;
     padding: 80px 50px 50px;
 
-    background-image: url('../img/review@1x.jpg');
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left top;
   }
@@ -69,16 +66,15 @@
   }
 
   .review__title {
-    margin-bottom: 60px;
-
     @include h2-tablet;
+
+    margin-bottom: 45px;
   }
 
   .review__text {
     font-size: 17px;
 
-    margin-bottom: 60px;
-    padding-right: 105px;
+    margin-bottom: 55px;
   }
 
   .review__footer {
@@ -101,8 +97,12 @@
 
 @media (min-width: $desktop-width) {
   .review {
-    width: 1250px;
-    padding: 80px 100px 100px;
+    width: 1150px;
+    margin-bottom: 155px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    background-position: left 50px top;
   }
 
   .review__wrapper {
@@ -110,11 +110,22 @@
     margin-left: auto;
   }
 
+  .review__title {
+    margin-bottom: 50px;
+
+    @include h2-desktop;
+  }
+
   .review__text {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    padding-right: 105px;
   }
 
   .review__author--name {
     font-size: 17px;
+  }
+
+  .review__btn {
+    top: 10px;
   }
 }

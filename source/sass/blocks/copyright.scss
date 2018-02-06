@@ -1,10 +1,10 @@
 .copyright {
   width: 100%;
-  padding-top: 28px;
+  padding-top: 20px;
 
   text-align: center;
 
-  border-top: 1px solid rgba(#444, .2%);
+  border-top: 1px solid rgba(#444444, 0.2%);
 }
 
 .copyright__text {
@@ -12,7 +12,7 @@
 
   display: inline-block;
 
-  margin-right: 30px;
+  margin-right: 25px;
 
   vertical-align: middle;
 }
@@ -27,9 +27,18 @@
 
   vertical-align: middle;
 
-  background-image: url('../img/logo-htmlacademy.svg');
+  opacity: 0.6;
+  background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

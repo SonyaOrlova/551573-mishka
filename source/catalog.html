@@ -12,13 +12,13 @@
 
   <header class="page-header">
 
-    <nav class="header-navigation">
+    <nav class="header-navigation header-navigation--closed header-navigation--nojs">
 
       <a class="page-header__logo" href="index.html">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka. Милые штуки ручной работы">
       </a>
 
-      <button class="header-navigation__toggle header-navigation__toggle--open header-navigation__toggle--nojs" type="button">Меню</button>
+      <button class="header-navigation__toggle" type="button">Меню</button>
 
       <ul class="header-navigation__menu header-navigation__menu--site">
 
@@ -83,7 +83,7 @@
 
             <div class="product-card__purchase">
 
-              <p class="product-card__price">1200 руб.</p>
+              <p class="product-card__price">1 200 руб.</p>
               <a class="product-card__order" href="#">Заказать</a>
 
             </div>
@@ -127,7 +127,7 @@
 
             <div class="product-card__purchase">
 
-              <p class="product-card__price">1500 руб.</p>
+              <p class="product-card__price">1 500 руб.</p>
               <a class="product-card__order" href="#">Заказать</a>
 
             </div>
@@ -186,28 +186,84 @@
 
   </footer>
 
-  <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+  <div class="popup">
 
-    <p class="popup__title">Добавить в корзину</p>
+    <div class="popup__overlay"></div>
 
-    <fieldset class="popup__area">
+    <form class="popup__form popup__form--closed" action="https://echo.htmlacademy.ru" method="post">
 
-      <legend class="popup__caption">Выберите размер:</legend>
+      <p class="popup__title">Добавить в корзину</p>
 
-      <input class="visually-hidden popup__checkbox" type="checkbox" id="size1" name="size" checked>
-      <label for="size1">S</label>
+      <fieldset class="popup__area">
 
-      <input class="visually-hidden popup__checkbox" type="checkbox" id="size2" name="size">
-      <label for="size2">M</label>
+        <legend class="popup__caption">Выберите размер:</legend>
 
-      <input class="visually-hidden popup__checkbox" type="checkbox" id="size3" name="size">
-      <label for="size3">L</label>
+        <input class="visually-hidden popup__checkbox" type="checkbox" id="size1" name="size" checked>
+        <label for="size1">S</label>
 
-    </fieldset>
+        <input class="visually-hidden popup__checkbox" type="checkbox" id="size2" name="size">
+        <label for="size2">M</label>
 
-    <button class="btn popup__btn" type="submit">Добавить</button>
+        <input class="visually-hidden popup__checkbox" type="checkbox" id="size3" name="size">
+        <label for="size3">L</label>
 
-  </form>
+      </fieldset>
+
+      <button class="btn popup__btn" type="submit">Добавить</button>
+
+    </form>
+
+  </div>
+
+  <script>
+
+    var navMain = document.querySelector('.header-navigation');
+    var navToggle = document.querySelector('.header-navigation__toggle');
+
+    navMain.classList.remove('header-navigation--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('header-navigation--closed')) {
+        navMain.classList.remove('header-navigation--closed');
+        navMain.classList.add('header-navigation--opened');
+      } else {
+        navMain.classList.add('header-navigation--closed');
+        navMain.classList.remove('header-navigation--opened');
+      }
+    });
+
+  </script>
+
+  <script>
+
+    var link = document.querySelector(".product-card__order");
+    var popup = document.querySelector(".popup__form");
+    var overlay = document.querySelector(".popup__overlay");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+
+      popup.classList.add("popup__form--opened");
+      overlay.classList.add("popup__overlay--opened");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        if (popup.classList.contains("popup__form--opened")) {
+          popup.classList.remove("popup__form--opened");
+          overlay.classList.remove("popup__overlay--opened")
+        }
+      }
+    });
+
+    overlay.addEventListener('click', function() {
+      if (popup.classList.contains("popup__form--opened")) {
+        popup.classList.remove("popup__form--opened");
+        overlay.classList.remove("popup__overlay--opened");
+      }
+    });
+
+  </script>
 
 </body>
 

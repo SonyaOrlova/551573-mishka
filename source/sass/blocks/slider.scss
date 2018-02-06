@@ -1,7 +1,7 @@
 .slider__controls {
   font-size: 0;
 
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .slider__button {
@@ -13,16 +13,24 @@
   width: 50%;
   padding: 14px 0;
 
-  border: 1px solid rgba(#444, .1%);
+  border: 1px solid rgba(#444444, 0.1%);
   background-repeat: no-repeat;
   background-position: center;
 
   &--prev {
-    background-image: url('../img/icon-left-arrow.svg');
+    background-image: url("../img/icon-left-arrow.svg");
   }
 
   &--next {
-    background-image: url('../img/icon-right-arrow.svg');
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -40,7 +48,6 @@
   }
 
   .slider__button {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border: none;
   }
 }
