@@ -10,16 +10,15 @@
 
 <body>
 
-
   <header class="page-header">
 
-    <nav class="header-navigation">
+    <nav class="header-navigation header-navigation--closed header-navigation--nojs">
 
       <a class="page-header__logo" href="index.html">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Mishka. Милые штуки ручной работы">
       </a>
 
-      <button class="header-navigation__toggle header-navigation__toggle--open header-navigation__toggle--nojs" type="button">Меню</button>
+      <button class="header-navigation__toggle" type="button">Меню</button>
 
       <ul class="header-navigation__menu header-navigation__menu--site">
 
@@ -71,7 +70,7 @@
 
       <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-      <div class="form__area">
+      <div class="form__area form__area--type">
 
         <div class="form__area-wrapper">
 
@@ -97,7 +96,7 @@
 
           <p class="form__caption">Цвет</p>
 
-          <div class="form__field">
+          <div class="form__field form__field--color">
 
             <input class="visually-hidden form__checkbox" type="checkbox" id="color1" name="color" checked>
             <label for="color1">Белый</label>
@@ -106,7 +105,7 @@
             <label for="color2">Серый</label>
 
             <input class="visually-hidden form__checkbox" type="checkbox" id="color3" name="color">
-            <label for="color3">"Тиффани"</label>
+            <label for="color3">«Тиффани»</label>
 
             <input class="visually-hidden form__checkbox" type="checkbox" id="color4" name="color">
             <label for="color4">Черный</label>
@@ -123,32 +122,32 @@
 
       </div>
 
-      <div class="form__area">
+      <div class="form__area form__area--username">
 
         <div class="form__area-wrapper">
 
           <p class="form__caption">ФИО</p>
 
-          <div class="form__field">
+          <div class="form__field form__field--username">
 
             <div class="form__field-inner">
 
-              <label class="form__text-label" for="name">Имя:</label>
-              <input class="form__text form__text--name" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+              <label for="name">Имя:</label>
+              <input class="form__text form__text--username" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
 
             </div>
 
             <div class="form__field-inner">
 
-              <label class="form__text-label" for="surname">Фамилия:</label>
-              <input class="form__text form__text--name" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+              <label for="surname">Фамилия:</label>
+              <input class="form__text form__text--username" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
 
             </div>
 
             <div class="form__field-inner">
 
-              <label class="form__text-label" for="middle-name">Отчество:</label>
-              <input class="form__text form__text--name" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
+              <label  for="middle-name">Отчество:</label>
+              <input class="form__text form__text--username" type="text" id="middle-name" name="middle-name" placeholder="Отчество, если желаете">
 
             </div>
 
@@ -186,7 +185,7 @@
 
       </div>
 
-      <div class="form__area">
+      <div class="form__area  form__area--comment">
 
         <div class="form__area-wrapper">
 
@@ -194,7 +193,7 @@
 
           <div class="form__field">
 
-            <textarea class="form__text form__textarea" id="comment" name="comment" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="form__text form__textarea" id="comment" name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
 
           </div>
 
@@ -202,7 +201,7 @@
 
       </div>
 
-      <div class="form__area">
+      <div class="form__area  form__area--submit">
 
         <div class="form__area-wrapper">
 
@@ -244,6 +243,24 @@
     </div>
 
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.header-navigation');
+    var navToggle = document.querySelector('.header-navigation__toggle');
+
+    navMain.classList.remove('header-navigation--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('header-navigation--closed')) {
+        navMain.classList.remove('header-navigation--closed');
+        navMain.classList.add('header-navigation--opened');
+      } else {
+        navMain.classList.add('header-navigation--closed');
+        navMain.classList.remove('header-navigation--opened');
+      }
+    });
+
+  </script>
 
 </body>
 
