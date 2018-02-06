@@ -1,0 +1,70 @@
+.social {
+  margin-bottom: 25px;
+}
+
+.social__link {
+  font-size: 0;
+
+  display: inline-block;
+
+  width: 25px;
+  height: 30px;
+  margin-right: 30px;
+
+  vertical-align: middle;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--inst {
+    background-image: url("../img/icon-insta.svg");
+
+    &:hover {
+      background-image: url("../img/icon-insta--hover.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-image: url("../img/icon-insta--hover.svg");
+    }
+  }
+
+  &--fb {
+    background-image: url("../img/icon-fb.svg");
+
+    &:hover {
+      background-image: url("../img/icon-fb--hover.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-image: url("../img/icon-fb--hover.svg");
+    }
+  }
+
+  &--tw {
+    background-image: url("../img/icon-twitter.svg");
+
+    &:hover {
+      background-image: url("../img/icon-twitter--hover.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-image: url("../img/icon-twitter--hover.svg");
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    margin-right: 80px;
+    margin-bottom: 0;
+    margin-left: 160px;
+    padding-bottom: 0;
+  }
+}

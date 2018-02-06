@@ -1,14 +1,13 @@
 .about-us {
   box-sizing: border-box;
   width: 320px;
-  margin: 0 auto 30px;
+  margin: 0 auto 28px;
   padding: 0 30px;
 }
 
 .about-us__title {
-  margin-bottom: 30px;
-
   @include h2;
+  margin-bottom: 30px;
 }
 
 @media (min-width: $tablet-width) {
@@ -20,16 +19,16 @@
   }
 
   .about-us__title {
+    margin-bottom: 50px;
+
     @include h2-tablet;
   }
 }
 
 @media (min-width: $desktop-width) {
   .about-us {
-    width: 1250px;
-    margin-bottom: 35px;
-    padding-right: 100px;
-    padding-left: 100px;
+    width: 1150px;
+    margin-bottom: 30px;
   }
 
   .about-us__wrapper {

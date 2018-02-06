@@ -3,34 +3,41 @@
 }
 
 .advantages__feature {
-  padding-top: 50px;
-  padding-bottom: 30px;
+  line-height: 20px;
+
+  padding-top: 55px;
+  padding-bottom: 28px;
 
   background-repeat: no-repeat;
-  background-position: top left;
 
   &--eco {
-    background-image: url('../img/icon-feature-flower.svg');
+    background-image: url("../img/icon-feature-flower.svg");
+    background-position: top left 10px;
   }
 
   &--price {
-    background-image: url('../img/icon-feature-money.svg');
+    background-image: url("../img/icon-feature-money.svg");
+    background-position: top left;
   }
 
   &--photo-likes {
-    background-image: url('../img/icon-feature-heart.svg');
+    background-image: url("../img/icon-feature-heart.svg");
+    background-position: top 7px left 10px;
   }
 
   &--handmade {
-    background-image: url('../img/icon-feature-ball.svg');
+    background-image: url("../img/icon-feature-ball.svg");
+    background-position: top 5px left 5px;
   }
 
   &--local {
-    background-image: url('../img/icon-feature-rocket.svg');
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-position: top 5px left;
   }
 
   &--gift-pack {
-    background-image: url('../img/icon-feature-gift.svg');
+    background-image: url("../img/icon-feature-gift.svg");
+    background-position: top 3px left 3px;
   }
 }
 
@@ -46,7 +53,7 @@
 
     box-sizing: border-box;
     width: 50%;
-    padding-bottom: 55px;
+    padding-bottom: 60px;
 
     &--eco {
       order: 1;
@@ -76,7 +83,7 @@
 
 @media (min-width: $desktop-width) {
   .advantages {
-    width: 650px;
+    width: 700px;
   }
 
   .advantages__feature {

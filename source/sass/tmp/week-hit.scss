@@ -1,7 +1,7 @@
 .week-hit {
   box-sizing: border-box;
   width: 320px;
-  margin: 0 auto 75px;
+  margin: 0 auto 70px;
   padding: 0 30px;
 }
 
@@ -10,8 +10,8 @@
 }
 
 .week-hit__label {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 5px;
+  margin-bottom: 20px;
 
   text-transform: uppercase;
 
@@ -19,15 +19,16 @@
 }
 
 .week-hit__about {
-  color: #444;
+  color: #444444;
 }
 
 .week-hit__description {
   font-size: 15px;
   font-weight: 400;
+  line-height: 24px;
 
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
 .week-hit__features {
@@ -35,23 +36,27 @@
   font-weight: 400;
 
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   border-collapse: collapse;
 }
 
 .week-hit__benefit {
-  height: 35px;
+  height: 39px;
 
-  border-bottom: 1px solid rgba(#444, .2%);
+  border-bottom: 1px solid rgba(#444444, 0.2%);
 }
 
 .week-hit__option {
   text-align: left;
 }
 
+.week-hit__value {
+  padding-bottom: 2px;
+}
+
 .week-hit__img {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .week-hit__purchase {
@@ -68,31 +73,35 @@
 @media (min-width: $tablet-width) {
   .week-hit {
     width: 768px;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
     padding-right: 50px;
     padding-left: 50px;
   }
 
   .week-hit__title {
-    display: flex;
-
     width: 100%;
-    margin-bottom: 55px;
-
-    justify-content: space-between;
+    margin-bottom: 50px;
   }
 
   .week-hit__name {
+    display: inline-block;
+
     @include h2-tablet;
   }
 
   .week-hit__label {
-    margin-top: 0;
+    font-size: 17px;
+    line-height: 17px;
+
+    display: inline-block;
+    float: right;
+
+    width: 100px;
+    margin-top: 10px;
+    margin-right: 10px;
     margin-bottom: 0;
 
     text-align: center;
-
-    flex: 0;
   }
 
   .week-hit__about {
@@ -107,14 +116,15 @@
 
   .week-hit__description {
     font-size: 17px;
+    line-height: 30px;
 
     width: 290px;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
   }
 
   .week-hit__features {
     width: 290px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   .week-hit__img {
@@ -134,7 +144,12 @@
   .week-hit__price {
     font-size: 20px;
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
+  }
+
+  .week-hit__btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -142,10 +157,8 @@
   .week-hit {
     position: static;
 
-    width: 1250px;
-    margin-bottom: 165px;
-    padding-right: 100px;
-    padding-left: 100px;
+    width: 1150px;
+    margin-bottom: 155px;
   }
 
   .week-hit__wrapper {
@@ -158,7 +171,7 @@
     width: 875px;
     min-height: 635px;
     margin-left: auto;
-    padding-top: 65px;
+    padding-top: 55px;
 
     align-items: flex-start;
     flex-wrap: wrap;
@@ -170,7 +183,8 @@
 
   .week-hit__label {
     position: absolute;
-    left: -130px;
+    top: 60px;
+    left: -140px;
 
     width: 100px;
   }
@@ -179,14 +193,23 @@
     position: static;
   }
 
+  .week-hit__description {
+    margin-bottom: 45px;
+  }
+
+
   .week-hit__features {
-    margin-bottom: 100px;
+    margin-bottom: 110px;
   }
 
   .week-hit__img {
     z-index: -1;
 
-    width: 545px;
+    width: 525px;
     height: 100%;
+  }
+
+  .week-hit__price {
+    margin-bottom: 35px;
   }
 }
