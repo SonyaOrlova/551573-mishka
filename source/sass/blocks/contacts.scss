@@ -1,10 +1,16 @@
 .contacts {
+  box-sizing: border-box;
   margin-bottom: 40px;
+  padding-top: 45px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 6px;
 }
 
 .contacts__content {
   box-sizing: border-box;
-
   width: 320px;
   margin: 0 auto;
   padding: 0 30px;
@@ -60,6 +66,7 @@
 }
 
 .contacts__map {
+  height: 457px;
   margin-bottom: 38px;
 }
 
@@ -67,6 +74,7 @@
   display: block;
 
   width: 100%;
+  height: 100%;
 }
 
 .contacts__wrapper-btn {
@@ -79,6 +87,8 @@
 @media (min-width: $tablet-width) {
   .contacts {
     margin-bottom: 55px;
+    background-size: auto 16px;
+    padding-top: 60px;
   }
 
   .contacts__content {
@@ -95,11 +105,11 @@
     position: relative;
 
     width: 100%;
+    margin-bottom: 35px;
     padding-top: 15px;
     padding-bottom: 16px;
 
     @include h2-tablet;
-    margin-bottom: 35px;
 
     &::after {
       position: absolute;
@@ -120,6 +130,7 @@
   .contacts__item {
     width: 50%;
     margin-bottom: 0;
+    font-size: 17px;
   }
 
   .contacts__type {
@@ -149,6 +160,11 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
+    padding-top: 87px;
+    background-size: auto 23px;
+  }
+
+  .contacts__container {
     position: relative;
 
     box-sizing: border-box;
@@ -163,8 +179,8 @@
     width: 875px;
     min-height: 457px;
     margin-left: auto;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 
   .contacts__content {
@@ -175,10 +191,10 @@
   }
 
   .contacts__title {
-    @include h2-desktop;
-
     margin-top: 55px;
     margin-left: -3px;
+
+    @include h2-desktop;
 
     &::after {
       left: -110px;

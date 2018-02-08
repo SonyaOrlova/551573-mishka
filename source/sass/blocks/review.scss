@@ -1,7 +1,7 @@
 .review {
   box-sizing: border-box;
   width: 320px;
-  margin: 0 auto 90px;
+  margin: 0 auto 45px;
   padding: 0 30px;
 }
 
@@ -53,12 +53,17 @@
 @media (min-width: $tablet-width) {
   .review {
     width: 768px;
-    margin-bottom: 125px;
-    padding: 80px 50px 50px;
+    margin-bottom: 67px;
+    padding: 78px 50px 50px;
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left top;
+    background-size: 350px auto; /* не тянет картинку под переполнение, cover - растягивает ee на контейнер*/
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .review__wrapper {
@@ -68,7 +73,7 @@
   .review__title {
     @include h2-tablet;
 
-    margin-bottom: 45px;
+    margin-bottom: 47px;
   }
 
   .review__text {
@@ -98,7 +103,7 @@
 @media (min-width: $desktop-width) {
   .review {
     width: 1150px;
-    margin-bottom: 155px;
+    margin-bottom: 70px;
     padding-top: 70px;
     padding-bottom: 100px;
 
@@ -111,9 +116,8 @@
   }
 
   .review__title {
-    margin-bottom: 50px;
-
     @include h2-desktop;
+    margin-bottom: 50px;
   }
 
   .review__text {
