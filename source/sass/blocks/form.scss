@@ -228,6 +228,7 @@
 
 input::placeholder,
 textarea::placeholder {
+  font-size: 17px;
   font-weight: 400;
 
   color: rgba(#444444, 0.5%);
@@ -395,6 +396,11 @@ textarea::placeholder {
     padding-bottom: 15px;
 
     order: -1;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 19px;
   }
 }
 
