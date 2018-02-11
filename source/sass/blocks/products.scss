@@ -3,8 +3,13 @@
 
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    // background-size: 1150px auto;
+  }
 }
 
 .products__item {
@@ -56,7 +61,33 @@
 
 @media (min-width: $tablet-width) {
   .products {
-    margin-bottom: 50px;
+    position: relative;
+
+    margin-bottom: 32px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      // background-size: 2300px auto;
+    }
+
+    &::after {
+      position: absolute;
+
+      bottom: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 24px;
+
+      content: "";
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: auto 24px;
+    }
   }
 
   .products__wrapper {
@@ -78,16 +109,29 @@
 
   .products__link {
     padding-left: 35px;
+    padding-bottom: 47px;
+    font-size: 20px;
+
+    &--interior {
+      background-position: top 30px right 35px;
+    }
 
     &--toys {
-      background-position: center right 35px;
+      background-position: top 30px right 30px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .products {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      // background-size: 2300px auto;
+    }
   }
 
   .products__wrapper {
@@ -98,5 +142,6 @@
     font-size: 20px;
 
     padding-right: 375px;
+    padding-bottom: 40px;
   }
 }

@@ -1,5 +1,5 @@
 .copyright {
-  width: 100%;
+  min-width: 185px;
   padding-top: 20px;
 
   text-align: center;
@@ -43,7 +43,6 @@
 
 @media (min-width: $tablet-width) {
   .copyright {
-    width: auto;
     padding-top: 0;
 
     border-top: none;

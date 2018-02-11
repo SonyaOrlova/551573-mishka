@@ -1,6 +1,8 @@
 .page-header__logo {
   display: block;
+
   margin: 22px 30px 18px;
+
   text-align: center;
 
   &:hover {
@@ -19,30 +21,44 @@
 @media (min-width: $tablet-width) {
   .page-header {
     height: 88px;
+    position: relative;
+    z-index: 1;
   }
 
   .page-header__logo {
+    width: 113px;
+    height: 46px;
     margin-right: 0;
     margin-left: 0;
+
     order: 1;
   }
 
   .page-header__delivery-info {
     font-size: 15px;
     font-weight: 400;
+
     display: flex;
+
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
     padding-top: 15px;
     padding-left: 30px;
+
     color: #444444;
+
     order: 4;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__logo {
+    width: 149px;
+    height: 72px;
+    margin-top: 10px;
+    margin-bottom: 0;
+
     order: 2;
   }
 }
