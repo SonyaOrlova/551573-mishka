@@ -1,7 +1,7 @@
 .production {
   box-sizing: border-box;
   width: 320px;
-  margin: 0 auto 60px;
+  margin: 0 auto 63px;
   padding: 0 30px;
 }
 
@@ -64,17 +64,17 @@
 }
 
 .production__content {
-  padding: 27px 33px 27px 35px;
+  padding: 27px 33px;
 }
 
 .production__title {
   font-size: 17px;
 
   min-height: 40px;
-  margin-top: 20px;
+  margin-top: 22px;
   margin-right: 35px;
   margin-bottom: 25px;
-  margin-left: 35px;
+  margin-left: 33px;
   padding-left: 55px;
 
   background-image: url("../img/icon-video.svg");
@@ -96,7 +96,7 @@
 @media (min-width: $tablet-width) {
   .production {
     width: 768px;
-    margin-bottom: 65px;
+    margin-bottom: 61px;
     padding-top: 0;
     padding-right: 50px;
     padding-left: 50px;
@@ -132,8 +132,9 @@
 
   .production__title {
     font-size: 20px;
+    line-height: 24px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     margin-left: 40px;
     padding-top: 10px;
     margin-top: 25px;
@@ -144,7 +145,7 @@
     font-size: 15px;
     line-height: 30px;
 
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 }
 
@@ -182,18 +183,18 @@
   .production__content {
     box-sizing: border-box;
     width: 35%;
-    padding-right: 55px;
+    padding-right: 56px;
     padding-bottom: 60px;
-    padding-left: 77px;
+    padding-left: 78px;
   }
 
   .production__title {
     box-sizing: border-box;
     width: 35%;
     margin: 0;
-    padding: 92px 55px 30px 77px;
+    padding: 97px 56px 33px 78px;
 
-    background-position: top 40px left 77px;
+    background-position: top 43px left 79px;
   }
 
   .production__text {

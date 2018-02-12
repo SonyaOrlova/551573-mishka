@@ -1,5 +1,5 @@
 .catalog {
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 
 .catalog__wrapper {
@@ -14,6 +14,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog {
+    margin-bottom: 53px;
+  }
+
   .catalog__wrapper {
     width: 768px;
     padding-right: 50px;
@@ -21,10 +25,10 @@
   }
 
   .catalog__item {
-    margin-bottom: 55px;
+    margin-bottom: 53px;
 
     &:last-of-type {
-      margin-bottom: 50px;
+      margin-bottom: 0;
     }
   }
 }

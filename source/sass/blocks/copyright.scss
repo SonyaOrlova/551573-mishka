@@ -1,39 +1,33 @@
 .copyright {
-  min-width: 185px;
-  padding-top: 20px;
+  min-width: 183px;
+  padding-top: 22px;
 
   text-align: center;
 
   border-top: 1px solid rgba(#444444, 0.2%);
 }
 
-.copyright__text {
-  font-size: 19px;
-
-  display: inline-block;
-
-  margin-right: 25px;
-
-  vertical-align: middle;
-}
-
 .copyright__link {
   font-size: 0;
 
-  display: inline-block;
+  position: relative;
+  top: 0;
 
-  width: 27px;
-  height: 34px;
+  display: block;
 
+  width: 100%;
+  padding-top: 5px;
+
+  text-align: left;
   vertical-align: middle;
 
-  opacity: 0.6;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  color: #000000;
 
-  &:hover {
-    opacity: 1;
+  &:hover,
+  &:active {
+    .copyright__logo {
+      fill: #46c1ae;
+    }
   }
 
   &:active {
@@ -41,10 +35,26 @@
   }
 }
 
+.copyright__text {
+  font-size: 19px;
+}
+
+.copyright__logo {
+  position: absolute;
+  top: 2px;
+  right: 0;
+
+  fill: $theme-color;
+}
+
 @media (min-width: $tablet-width) {
   .copyright {
-    padding-top: 0;
+    padding-top: 3px;
 
     border-top: none;
+  }
+
+  .copyright__logo {
+    top: 5px;
   }
 }

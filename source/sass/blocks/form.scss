@@ -1,15 +1,16 @@
 .form {
   box-sizing: border-box;
   width: 320px;
-  margin: 0 auto 55px;
+  margin: 0 auto 56px;
   padding: 0 30px;
 }
 
 .form__description {
   font-size: 13px;
   font-weight: 400;
+  line-height: 24px;
 
-  margin-top: 0;
+  margin-top: -2px;
   margin-bottom: 20px;
 
   color: #444444;
@@ -17,15 +18,15 @@
 
 .form__area {
   &--type {
-    padding-bottom: 20px;
+    padding-bottom: 12px;
   }
 
   &--color {
-    padding-bottom: 3px;
+    padding-bottom: 7px;
   }
 
   &--username {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 }
 
@@ -33,7 +34,7 @@
   position: relative;
 
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   text-transform: uppercase;
 
@@ -71,13 +72,15 @@
 
 .form__radio + label,
 .form__checkbox + label {
+  line-height: 18px;
+
   position: relative;
 
   display: block;
 
   box-sizing: border-box;
   min-height: 40px;
-  padding-top: 8px;
+  padding-top: 10px;
   padding-left: 65px;
 
   cursor: pointer;
@@ -112,7 +115,7 @@
 
 .form__radio + label,
 .form__radio:checked + label {
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 
   &::before {
     border-radius: 50%;
@@ -138,7 +141,7 @@
 }
 
 .form__checkbox + label {
-  margin-bottom: 22px;
+  margin-bottom: 21px;
 }
 
 .form__checkbox:checked + label {
@@ -150,18 +153,14 @@
   }
 }
 
-.form__text-label {
-  display: block;
-}
-
 .form__text {
   display: block;
 
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
   color: #444444;
   border: none;
@@ -170,7 +169,7 @@
   background-repeat: no-repeat;
 
   &--tel {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     background-image: url("../img/icon-phone.svg");
     background-position: top 7px right 7px;
@@ -201,7 +200,7 @@
 .form__textarea {
   box-sizing: border-box;
   min-height: 142px;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   padding-right: 70px;
   padding-left: 18px;
 
@@ -223,7 +222,10 @@
 }
 
 .form__btn {
+  font-size: 17px;
+
   width: 100%;
+  padding-top: 15px;
 }
 
 input::placeholder,
@@ -238,24 +240,25 @@ textarea::placeholder {
   .form {
     width: auto;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     padding-right: 0;
     padding-left: 0;
   }
 
   .form__description {
     font-size: 17px;
+    line-height: 30px;
 
     box-sizing: border-box;
     width: 768px;
-    margin: 0 auto 8px;
+    margin: -2px auto 8px;
     padding-right: 50px;
     padding-left: 50px;
   }
 
   .form__area {
-    padding-top: 52px;
-    padding-bottom: 28px;
+    padding-top: 50px;
+    padding-bottom: 27px;
 
     &--color,
     &--contacts {
@@ -263,7 +266,7 @@ textarea::placeholder {
     }
 
     &--comment {
-      padding-top: 45px;
+      padding-top: 48px;
     }
 
     &--submit {
@@ -328,18 +331,19 @@ textarea::placeholder {
     font-size: 19px;
 
     min-height: 53px;
+    padding-top: 14px;
     padding-left: 80px;
 
     &::before {
-      width: 53px;
-      height: 53px;
+      width: 52px;
+      height: 52px;
     }
   }
 
   .form__radio + label,
   .form__radio:checked + label {
     width: 100%;
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   .form__radio:checked + label {
@@ -354,6 +358,7 @@ textarea::placeholder {
 
   .form__checkbox + label {
     width: 50%;
+    margin-bottom: 22px;
 
     &:nth-of-type(2n) {
       padding-left: 90px;
@@ -373,14 +378,15 @@ textarea::placeholder {
   .form__text {
     margin-bottom: 25px;
     padding-top: 10px;
+    padding-bottom: 16px;
     padding-left: 18px;
 
     &--tel {
-      background-position: top 5px right 25px;
+      background-position: top 7px right 27px;
     }
 
     &--email {
-      background-position: top 10px right 20px;
+      background-position: top 10px right 22px;
     }
   }
 
@@ -407,17 +413,24 @@ textarea::placeholder {
 @media (min-width: $desktop-width) {
   .form__description {
     width: 1150px;
+    margin-bottom: 7px;
     padding-right: 250px;
     padding-left: 225px;
   }
 
   .form__area {
-    padding-top: 50px;
-    padding-bottom: 23px;
+    &--type {
+      padding-bottom: 25px;
+    }
 
-    &--type,
-    &--color {
-      padding-bottom: 28px;
+    &--contacts {
+      padding-top: 48px;
+      padding-bottom: 23px;
+    }
+
+    &--comment {
+      padding-top: 51px;
+      padding-bottom: 21px;
     }
 
     &--submit {
@@ -432,7 +445,10 @@ textarea::placeholder {
   }
 
   .form__caption {
-    width: 13%;
+    box-sizing: border-box;
+    width: 13.5%;
+    padding-top: 12px;
+    padding-left: 3px;
   }
 
   .form__field {
@@ -452,7 +468,7 @@ textarea::placeholder {
   }
 
   .form__checkbox + label {
-    width: 30%;
+    width: 30.5%;
 
     &:nth-of-type(2n) {
       padding-left: 80px;
@@ -464,7 +480,7 @@ textarea::placeholder {
   }
 
   .form__text {
-    margin-bottom: 27px;
+    margin-bottom: 26px;
 
     &--tel {
       background-position: top 9px right 9px;
