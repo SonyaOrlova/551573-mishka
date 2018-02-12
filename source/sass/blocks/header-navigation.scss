@@ -66,46 +66,56 @@
 }
 
 .header-navigation__link {
+  position: relative;
+
   display: block;
 
   padding: 25px 0 30px 75px;
 
   color: #000000;
-  background-repeat: no-repeat;
-  background-position: left 30px center;
-
-  &--search {
-    background-image: url("../img/icon-search.svg");
-
-    &:hover {
-      background-image: url("../img/icon-search--hover.svg");
-    }
-
-    &:active {
-      opacity: 0.3;
-      background-image: url("../img/icon-search--hover.svg");
-    }
-  }
-
-  &--basket-empty {
-    background-image: url("../img/icon-cart.svg");
-
-    &:hover {
-      background-image: url("../img/icon-cart--hover.svg");
-    }
-
-    &:active {
-      opacity: 0.3;
-      background-image: url("../img/icon-cart--hover.svg");
-    }
-  }
 
   &:hover {
     color: rgba(#000000, 0.6%);
+
+    .header-navigation__icon {
+      opacity: 1;
+
+      fill: $theme-color;
+    }
   }
 
   &:active {
     color: rgba(#000000, 0.3%);
+
+    .header-navigation__icon {
+      opacity: 0.3;
+
+      fill: $theme-color;
+    }
+  }
+}
+
+.header-navigation__icon {
+  position: absolute;
+
+  opacity: 0.2;
+
+  fill: #000000;
+
+  &--search {
+    top: 30px;
+    left: 32px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  &--basket {
+    top: 30px;
+    left: 30px;
+
+    width: 21px;
+    height: 18px;
   }
 }
 
@@ -162,13 +172,13 @@
 
       margin-right: 35px;
       margin-left: 0;
-      padding-top: 15px;
+      padding-top: 16px;
       padding-bottom: 0;
       padding-left: 0;
     }
 
     &--user {
-      margin-left: 32px;
+      margin-left: 30px;
       padding-top: 30px;
       padding-bottom: 30px;
       padding-left: 0;
@@ -183,16 +193,25 @@
 
       border-right: 1px solid rgba(#444444, 0.2%);
       border-left: 1px solid rgba(#444444, 0.2%);
-      background-position: center center;
     }
 
     &--basket-empty {
       font-size: 17px;
 
       padding-right: 0;
-      padding-left: 50px;
+      padding-left: 52px;
+    }
+  }
 
-      background-position: left center;
+  .header-navigation__icon {
+    &--search {
+      top: 36px;
+      left: 33px;
+    }
+
+    &--basket {
+      top: 35px;
+      left: 0;
     }
   }
 }
@@ -249,7 +268,7 @@
     &--hidden {
       font-size: 15px;
 
-      padding-top: 15px;
+      padding-top: 16px;
       padding-bottom: 0;
     }
   }

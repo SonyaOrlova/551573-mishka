@@ -11,7 +11,7 @@
   box-sizing: border-box;
   width: 320;
   margin: 0 auto;
-  padding: 25px 30px;
+  padding: 22px 30px 25px;
 
   background-color: #f1f1f1;
 
@@ -32,7 +32,7 @@
     justify-content: space-between;
 
     width: 768px;
-    padding: 50px;
+    padding: 52px 50px;
   }
 
   .page-footer__logo {
@@ -41,11 +41,26 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  .page-footer__img {
+    fill: #000000;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-footer__wrapper {
     width: 1150px;
+    padding-top: 48px;
+    padding-bottom: 50px;
 
     justify-content: space-between;
   }
