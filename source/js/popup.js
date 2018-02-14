@@ -1,13 +1,13 @@
-var link = document.querySelector(".product-card__order");
-var popup = document.querySelector(".popup__form");
-var overlay = document.querySelector(".popup__overlay");
+for(var order = document.querySelectorAll(".product-card__order"),
+  popup = document.querySelector(".popup__form"),
+  overlay = document.querySelector(".popup__overlay"),
+  i=0;i<order.length;i++)
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-
-  popup.classList.add("popup__form--opened");
-  overlay.classList.add("popup__overlay--opened");
-});
+  order[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("popup__form--opened");
+    overlay.classList.add("popup__overlay--opened");
+  });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
@@ -18,7 +18,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-overlay.addEventListener('click', function() {
+overlay.addEventListener("click", function() {
   if (popup.classList.contains("popup__form--opened")) {
     popup.classList.remove("popup__form--opened");
     overlay.classList.remove("popup__overlay--opened");

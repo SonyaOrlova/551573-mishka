@@ -1,7 +1,6 @@
 .btn {
   font-size: 18px;
   font-weight: 700;
-  /*line-height: 16px;*/
 
   display: block;
 
@@ -12,6 +11,8 @@
   text-transform: uppercase;
 
   border: 2px solid #444444;
+  color: #000000;
+  background-color: #ffffff;
 
   &:hover {
     color: #ffffff;

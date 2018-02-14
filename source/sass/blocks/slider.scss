@@ -11,7 +11,7 @@
 
   box-sizing: border-box;
   width: 50%;
-  padding: 14px 0;
+  height: 53px;
 
   border: 1px solid rgba(#444444, 0.1%);
   background-repeat: no-repeat;
@@ -49,5 +49,6 @@
 
   .slider__button {
     border: none;
+    height: 58px;
   }
 }
