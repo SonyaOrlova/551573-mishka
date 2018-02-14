@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Mishka</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <script src="js/picturefill.js" async></script>
 </head>
 
 <body>
@@ -15,7 +18,7 @@
 
   <header class="page-header">
 
-    <nav class="header-navigation header-navigation--closed header-navigation--nojs">
+    <nav class="header-navigation header-navigation--opened header-navigation--nojs">
 
       <a class="page-header__logo" href="index.html">
         <picture>
@@ -254,7 +257,7 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <b class="copyright__text">Разработано</b>
-          <svg class="copyright__logo" width="27" height="34"><use xlink:href="#logo-htmlacademy"></use></svg>
+          <svg class="copyright__logo" width="27" height="34"><use xlink:href="#sprite-logo-htmlacademy"></use></svg>
         HTML Academy</a>
       </div>
 
@@ -262,23 +265,7 @@
 
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.header-navigation');
-    var navToggle = document.querySelector('.header-navigation__toggle');
-
-    navMain.classList.remove('header-navigation--nojs');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('header-navigation--closed')) {
-        navMain.classList.remove('header-navigation--closed');
-        navMain.classList.add('header-navigation--opened');
-      } else {
-        navMain.classList.add('header-navigation--closed');
-        navMain.classList.remove('header-navigation--opened');
-      }
-    });
-
-  </script>
+  <script src="js/menu.js"></script>
 
 </body>
 

@@ -7,7 +7,9 @@ var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var autoprefixer = require("autoprefixer");
-var minify = require("gulp-csso");
+var mincss = require("gulp-csso");
+var minhtml = require("gulp-htmlmin");
+var minjs = require("gulp-uglify");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
@@ -24,7 +26,7 @@ gulp.task("style", function () {
     autoprefixer()
     ]))
   .pipe(gulp.dest("build/css"))
-  .pipe(minify())
+  .pipe(mincss())
   .pipe(rename("style.min.css"))
   .pipe(gulp.dest("build/css"))
   .pipe(server.stream());
@@ -44,7 +46,14 @@ gulp.task("html", function () {
   .pipe(posthtml([
     include()
     ]))
+  .pipe(minhtml({collapseWhitespace: true}))
   .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function () {
+  return gulp.src("source/js/*.js")
+  .pipe(minjs())
+  .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("images", function () {
@@ -98,5 +107,6 @@ gulp.task("build", function (done) {
     "style",
     "sprite",
     "html",
+    "js",
     done);
 });

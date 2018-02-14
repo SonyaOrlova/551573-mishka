@@ -21,6 +21,7 @@
   cursor: pointer;
 
   border: none;
+  background-color: #ffffff;
 }
 
 .header-navigation--closed .header-navigation__toggle::before {
@@ -165,6 +166,8 @@
   }
 
   .header-navigation__link {
+    box-sizing: border-box;
+
     border-top: none;
 
     &--site {
@@ -187,9 +190,8 @@
     &--search {
       font-size: 0;
 
-      min-width: 20px;
-      padding-right: 30px;
-      padding-left: 33px;
+      min-width: 84px;
+      min-height: 88px;
 
       border-right: 1px solid rgba(#444444, 0.2%);
       border-left: 1px solid rgba(#444444, 0.2%);
@@ -198,8 +200,9 @@
     &--basket-empty {
       font-size: 17px;
 
+      min-height: 88px;
       padding-right: 0;
-      padding-left: 52px;
+      padding-left: 53px;
     }
   }
 
