@@ -357,15 +357,11 @@ textarea::placeholder {
   }
 
   .form__checkbox + label {
-    width: 50%;
+    width: 45%;
     margin-bottom: 22px;
 
     &:nth-of-type(2n) {
-      padding-left: 90px;
-
-      &::before {
-        left: 10px;
-      }
+      margin-left: 35px;
     }
   }
 
@@ -419,6 +415,7 @@ textarea::placeholder {
   }
 
   .form__area {
+
     &--type {
       padding-bottom: 25px;
     }
@@ -456,8 +453,6 @@ textarea::placeholder {
     width: 87%;
     padding-right: 55px;
 
-    justify-content: space-between;
-
     &--color {
       padding-right: 0;
     }
@@ -469,13 +464,14 @@ textarea::placeholder {
 
   .form__checkbox + label {
     width: 30.5%;
+    margin-right: calc(8.5%/2);
 
     &:nth-of-type(2n) {
-      padding-left: 80px;
+      margin-left: 0;
+    }
 
-      &::before {
-        left: 0;
-      }
+    &:nth-of-type(3n) {
+      margin-right: 0;
     }
   }
 

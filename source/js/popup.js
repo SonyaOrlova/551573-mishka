@@ -1,13 +1,14 @@
-for(var order = document.querySelectorAll(".product-card__order"),
-  popup = document.querySelector(".popup__form"),
-  overlay = document.querySelector(".popup__overlay"),
-  i=0;i<order.length;i++)
+var order = document.querySelectorAll(".product-card__order");
+var popup = document.querySelector(".popup__form");
+var overlay = document.querySelector(".popup__overlay");
 
+for (var i=0; i<order.length; i++) {
   order[i].addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("popup__form--opened");
     overlay.classList.add("popup__overlay--opened");
-  });
+  })
+};
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {

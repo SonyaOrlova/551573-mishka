@@ -100,7 +100,8 @@
     margin-bottom: 32px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-size: cover;
+    background-position: center top;
+    background-size: auto 747px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");

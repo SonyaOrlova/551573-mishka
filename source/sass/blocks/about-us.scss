@@ -1,7 +1,8 @@
 .about-us {
   box-sizing: border-box;
-  margin-bottom: 28px;
-  padding-top: 35px;
+  width: 320px;
+  margin: 0 auto 28px;
+  padding: 35px 30px 0;
 
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
@@ -9,38 +10,24 @@
   background-size: auto 6px;
 }
 
-.about-us__container {
-  box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 30px;
-}
-
 .about-us__title {
   @include h2;
-
   margin-bottom: 30px;
 }
 
 @media (min-width: $tablet-width) {
   .about-us {
     margin-bottom: 27px;
-    padding-top: 60px;
+    padding: 60px 50px 0;
 
     background-size: auto 16px;
-  }
 
-  .about-us__container {
     width: 768px;
-    margin-bottom: 25px;
-    padding-right: 50px;
-    padding-left: 50px;
   }
 
   .about-us__title {
-    margin-bottom: 50px;
-
     @include h2-tablet;
+    margin-bottom: 50px;
   }
 }
 
@@ -48,9 +35,6 @@
   .about-us {
     margin-bottom: 32px;
     padding-top: 83px;
-  }
-
-  .about-us__container {
     width: 1150px;
   }
 

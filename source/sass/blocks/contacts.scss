@@ -1,19 +1,19 @@
 .contacts {
   box-sizing: border-box;
   margin-bottom: 40px;
-  padding-top: 45px;
-
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: repeat-x;
-  background-position: top center;
-  background-size: auto 6px;
 }
+
 
 .contacts__content {
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 45px 30px 0;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-size: auto 6px;
 }
 
 .contacts__title {
@@ -78,6 +78,13 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/icon-map-pin.svg"), url("../img/map-mobile@2x.jpg");
   }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+  }
 }
 
 .contacts__img-map {
@@ -97,9 +104,9 @@
 @media (min-width: $tablet-width) {
   .contacts {
     margin-bottom: 55px;
-    padding-top: 58px;
+  }
 
-    background-size: auto 16px;
+  .contacts__container {
   }
 
   .contacts__content {
@@ -107,7 +114,9 @@
 
     width: 768px;
     margin-bottom: 55px;
-    padding: 0 50px;
+    padding: 58px 50px 0;
+
+    background-size: auto 16px;
 
     flex-wrap: wrap;
   }
@@ -178,18 +187,23 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-    padding-top: 92px;
-
-    background-size: auto 23px;
-  }
-
-  .contacts__container {
     position: relative;
 
     box-sizing: border-box;
     width: 1150px;
     margin: 0 auto 105px;
     padding: 0 50px;
+
+    background-size: auto 23px;
+  }
+
+  .contacts__container {
+    padding-top: 92px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: auto 16px;
   }
 
   .contacts__wrapper {
@@ -205,12 +219,15 @@
   .contacts__content {
     width: 300px;
     margin: 0 0 48px;
+    padding-top: 0;
     padding-right: 0;
     padding-left: 0;
+
+    background-image: none;
   }
 
   .contacts__title {
-    margin-top: 55px;
+    margin-top: 52px;
     margin-left: -3px;
 
     @include h2-desktop;
