@@ -217,7 +217,7 @@
 
             <div class="contacts__item contacts__item--address">
               <p class="contacts__type">адрес:</p>
-              <p class="contacts__info contacts__info--address">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</p>
+              <p class="contacts__info contacts__info--address">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис 101</p>
             </div>
 
           </div>
@@ -270,7 +270,37 @@
 
   </footer>
 
+  <div class="popup">
+
+    <div class="popup__overlay"></div>
+
+    <form class="popup__form popup__form--closed" action="https://echo.htmlacademy.ru" method="post">
+
+      <p class="popup__title">Добавить в корзину</p>
+
+      <fieldset class="popup__area">
+
+        <legend class="popup__caption">Выберите размер:</legend>
+
+        <input class="visually-hidden popup__checkbox" type="checkbox" id="size1" name="size" checked>
+        <label for="size1">S</label>
+
+        <input class="visually-hidden popup__checkbox" type="checkbox" id="size2" name="size">
+        <label for="size2">M</label>
+
+        <input class="visually-hidden popup__checkbox" type="checkbox" id="size3" name="size">
+        <label for="size3">L</label>
+
+      </fieldset>
+
+      <button class="btn popup__btn" type="submit">Добавить</button>
+
+    </form>
+
+  </div>
+
   <script src="js/menu.js"></script>
+  <script src="js/popup-weekhit.js"></script>
 
 </body>
 
